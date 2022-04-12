@@ -1,0 +1,15 @@
+import br.com.furukawa.model.TurnoDuracao
+
+model {
+    TurnoDuracao duracao
+}
+
+json {
+    id duracao.id
+    turnoId duracao.turnoId
+    turno duracao.turno.nome
+    horarioFinal duracao.horarioFinalFormatado
+    horarioInicial duracao.inicioFormatado
+    duracao duracao.duracaoFormatada
+    dias duracao.dias.sort {it.ordinal()}
+}

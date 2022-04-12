@@ -1,0 +1,15 @@
+import br.com.furukawa.enums.DiaDaSemana
+import br.com.furukawa.model.Turno
+import br.com.furukawa.model.TurnoDuracao
+
+model {
+    List<TurnoDuracao> entities
+    Integer total
+    List<DiaDaSemana> dias
+}
+
+json {
+    entities g.render(template: 'list', collection: entities, var: 'duracao')
+    total total
+    dias dias
+}

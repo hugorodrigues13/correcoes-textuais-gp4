@@ -1,0 +1,51 @@
+.box{
+  width: 250px;
+  height: 100px;
+  border: 1px solid;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #777;
+}
+
+.aberto{
+  background: #B6E5DA;
+}
+
+.fechado{
+  background: #F1EA8B;
+}
+
+.box .icon{
+  width: 50px;
+  height: 50px;
+}
+
+.box .info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box .info > p{
+  padding: 0;
+  margin: 0;
+}
+
+.div-chart-status-seriais {
+  display: flex;
+}
+
+.div-chart-status-seriais > .ant-row {
+  display: block;
+}
+
+.div-alerta-sem-seriais {
+  padding: 32px 25px;
+}

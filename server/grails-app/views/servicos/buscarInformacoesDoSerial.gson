@@ -1,0 +1,15 @@
+import br.com.furukawa.model.SerialFabricacao
+
+model {
+    SerialFabricacao serial
+}
+
+json {
+    ordemFabricacao serial.ordemDeFabricacao.getCodigoOrdemDeFabricacao()
+    quantidade serial.ordemDeFabricacao.quantidadeTotal
+    codigoProduto serial.codigoProduto
+    codigoServico serial.ordemDeFabricacao.ordemDeProducao.codigoServico
+    idFornecedor serial.getFornecedorDaOrganizacao()?.id
+    nomeFornecedor serial.getFornecedorDaOrganizacao()?.nome
+    processo g.render(template: 'grupoRecurso', model: [grupoRecurso: serial.getProcessoAtual()])
+}

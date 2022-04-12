@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.HoraApontamentoGraficoDTO
+
+model {
+    HoraApontamentoGraficoDTO hora
+}
+
+json {
+    ordem hora.ordem
+    hora hora.hora
+    quantidade hora.quantidade
+}

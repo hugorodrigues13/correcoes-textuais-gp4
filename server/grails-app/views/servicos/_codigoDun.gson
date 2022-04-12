@@ -1,0 +1,11 @@
+import br.com.furukawa.model.CodigoDUN
+
+model {
+    CodigoDUN codigoDun
+}
+
+json {
+    codigo codigoDun.codigo
+    conversionRate codigoDun.conversionRate
+    unidade codigoDun.unidade
+}

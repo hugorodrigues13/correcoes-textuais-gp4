@@ -1,0 +1,9 @@
+import br.com.furukawa.model.Impressora
+
+model {
+    List<Impressora> impressoras
+}
+
+json {
+    impressoras g.render(template: "impressoraList", collection: impressoras, var: "impressora")
+}

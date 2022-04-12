@@ -1,0 +1,12 @@
+import br.com.furukawa.dtos.ebs.ComponenteWIP
+
+model {
+    ComponenteWIP material
+}
+
+json {
+    codigoProduto material.codigoProduto
+    organizationId material.organizationId
+    codigoSubinventario material.codigoSubinventario
+    locatorId material.locatorId
+}

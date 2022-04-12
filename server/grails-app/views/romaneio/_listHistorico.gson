@@ -1,0 +1,17 @@
+import br.com.furukawa.model.HistoricoRomaneio
+
+model {
+    HistoricoRomaneio historico
+}
+
+json {
+    data historico.getDataDiaMesAno()
+    hora historico.getHoraFormatada()
+    nfEncomenda historico.codigoNotaFiscalEncomenda
+    nfRetorno historico.codigoNotaFiscalRetorno
+    status historico.status
+    integracao historico.statusIntegracao
+    usuario historico.usuario
+    motivo historico.motivo
+    id historico.id
+}

@@ -1,0 +1,14 @@
+import br.com.furukawa.model.Conector
+import br.com.furukawa.model.Recurso
+
+model {
+    Recurso entityInstance
+    List<Conector> listConectores
+    List<String> tiposTeste
+}
+
+json {
+    entityInstance g.render(template: 'form', model:[recurso: entityInstance])
+    listConectores  g.render(template: "conectorList", collection:  listConectores, var: "conector")
+    tiposTeste tiposTeste
+}

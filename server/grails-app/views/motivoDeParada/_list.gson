@@ -1,0 +1,14 @@
+import br.com.furukawa.dtos.MotivoDeParadaDTO
+
+model {
+    MotivoDeParadaDTO motivoParada
+}
+
+json {
+    id motivoParada.id
+    motivo motivoParada.motivo
+    tipo motivoParada.tipo
+    isAtivo motivoParada.isAtivo
+    status motivoParada.getStatus()
+    gruposRecurso motivoParada.gruposRecurso.sort()
+}

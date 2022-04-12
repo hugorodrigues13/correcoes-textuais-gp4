@@ -1,0 +1,13 @@
+import br.com.furukawa.model.Acesso
+
+model {
+    Acesso acesso
+    List<Long> organizacoes
+    List<Long> fornecedores
+}
+
+json {
+    nome acesso.nome
+    organizacoes organizacoes
+    fornecedores fornecedores
+}

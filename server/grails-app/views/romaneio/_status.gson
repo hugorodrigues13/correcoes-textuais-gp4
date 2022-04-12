@@ -1,0 +1,10 @@
+import br.com.furukawa.enums.StatusRomaneio
+
+model {
+    StatusRomaneio statusRomaneio
+}
+
+json {
+    key statusRomaneio
+    value statusRomaneio
+}

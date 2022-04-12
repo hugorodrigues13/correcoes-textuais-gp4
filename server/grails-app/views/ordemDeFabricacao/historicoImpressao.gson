@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.LogOperacaoDTO
+
+model {
+    List <LogOperacaoDTO> logOperacao
+}
+
+json {
+    historicoImpressaoOF g.render(template: 'listHitoricoImpressao', collection: logOperacao, var: 'logOperacao')
+}

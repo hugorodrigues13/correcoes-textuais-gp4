@@ -1,0 +1,14 @@
+import br.com.furukawa.model.Meta
+
+model {
+    Meta entityInstance
+}
+
+json {
+    id entityInstance.id
+    linhaDeProducao entityInstance.linhaDeProducao?.id
+    metaReprocessos entityInstance.metaReprocessos
+    metaHK entityInstance.metaHK
+    inicioVigencia entityInstance.inicioVigencia
+    fimVigencia entityInstance.fimVigencia
+}

@@ -1,0 +1,19 @@
+import br.com.furukawa.model.ServicoRomaneio
+
+model {
+    ServicoRomaneio servicoRomaneio
+}
+
+json {
+    id servicoRomaneio.id
+    key servicoRomaneio.id
+    codigo servicoRomaneio.codigo
+    descricao servicoRomaneio.descricao
+    unidade servicoRomaneio.unidade
+    quantidade servicoRomaneio.quantidade
+    valorUnitario servicoRomaneio.valorUnitario
+    quantidadeTotal servicoRomaneio.quantidade
+    valorTotal servicoRomaneio.valorTotal
+    volume servicoRomaneio.getVolume()
+    produtos g.render(template: "produto", collection: servicoRomaneio.produtos?.sort {it.ordemDeProducao?.numero}, var: "produto")
+}

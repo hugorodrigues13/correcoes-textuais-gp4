@@ -1,0 +1,9 @@
+import br.com.furukawa.enums.StatusOrdemFabricacao
+
+model {
+    List<String> ordensDeProducao
+}
+
+json {
+    ordensDeProducao ordensDeProducao
+}

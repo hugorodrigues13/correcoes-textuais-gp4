@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.StatusSeriaisGraficoDTO
+
+model {
+    StatusSeriaisGraficoDTO statusSerial
+}
+
+json {
+    ordem statusSerial.ordem
+    status statusSerial.status
+    quantidade statusSerial.quantidade
+}

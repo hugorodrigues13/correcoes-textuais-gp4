@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Turno
+import br.com.furukawa.model.TurnoDuracao
+
+model {
+    TurnoDuracao turnoDuracao
+}
+
+json {
+    inicio turnoDuracao.getInicioFormatado()
+    fim turnoDuracao.getHorarioFinalFormatado()
+    dias g.render(template: "dia", collection: turnoDuracao.dias.sort {it.day}, var: "dia")
+}

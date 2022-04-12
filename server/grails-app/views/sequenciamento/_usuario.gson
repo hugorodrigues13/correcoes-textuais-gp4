@@ -1,0 +1,10 @@
+import br.com.furukawa.model.User
+
+model {
+    User usuario
+}
+
+json {
+    id usuario?.id
+    nome usuario?.fullname
+}

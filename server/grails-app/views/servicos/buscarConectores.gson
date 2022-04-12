@@ -1,0 +1,9 @@
+import br.com.furukawa.model.Conector
+
+model {
+    List<Conector> conectores
+}
+
+json {
+    conectores g.render(template: "listConectores", collection: conectores, var: "conector")
+}

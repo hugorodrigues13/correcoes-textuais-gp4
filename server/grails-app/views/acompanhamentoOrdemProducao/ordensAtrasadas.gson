@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.OrdemDeProducaoDTO
+
+model {
+    List<OrdemDeProducaoDTO> entities
+    Long total
+}
+
+json{
+    entities g.render(template: "listaOrdensAtrasadas", collection: entities, var: "ordemDeProducao")
+    total total
+}

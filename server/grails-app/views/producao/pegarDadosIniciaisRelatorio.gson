@@ -1,0 +1,7 @@
+model {
+    List<String> gruposLinhas
+}
+
+json {
+    gruposLinhas gruposLinhas
+}

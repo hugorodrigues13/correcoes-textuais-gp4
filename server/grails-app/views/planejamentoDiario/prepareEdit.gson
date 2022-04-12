@@ -1,0 +1,21 @@
+import br.com.furukawa.model.GrupoLinhaDeProducao
+import br.com.furukawa.model.LinhaDeProducao
+import br.com.furukawa.model.PlanejamentoDiario
+import br.com.furukawa.model.Turno
+
+model {
+    PlanejamentoDiario entityInstance
+    List<LinhaDeProducao> linhasProducao
+    List<GrupoLinhaDeProducao> gruposLinhaProducao
+    List<Turno> turnos
+    List<String> dias
+}
+
+json {
+    entityInstance g.render(template: 'form', model: [planejamentoDiario: entityInstance])
+    linhasProducao g.render(template: 'linhaDeProducao', collection: linhasProducao, var: 'linhaDeProducao')
+    turnos g.render(template: 'turno', collection: turnos, var: 'turno')
+    dias dias
+    gruposLinhaProducao g.render(template: 'grupoLinhaProducao', collection: gruposLinhaProducao, var: 'grupoLinhaDeProducao')
+}
+

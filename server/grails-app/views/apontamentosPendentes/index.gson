@@ -1,0 +1,13 @@
+import br.com.furukawa.dtos.ApontamentoPendenteDTO
+import br.com.furukawa.model.Apontamento
+
+model {
+//    List<Apontamento> entities
+    List<ApontamentoPendenteDTO> entities
+    Integer total
+}
+
+json {
+    entities g.render(template: 'list', collection: entities, var: 'apontamento')
+    total total
+}

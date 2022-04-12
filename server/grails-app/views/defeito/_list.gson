@@ -1,0 +1,13 @@
+import br.com.furukawa.dtos.DefeitoDTO
+
+model {
+    DefeitoDTO defeito
+}
+
+json {
+    id defeito.id
+    nome defeito.nome
+    grupoRecursos defeito.grupoRecursos*.nome.join(", ")
+    isAtivo defeito.isAtivo
+    status defeito.getStatus()
+}

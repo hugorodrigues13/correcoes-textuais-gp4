@@ -1,0 +1,14 @@
+import br.com.furukawa.model.GrupoRecurso
+import br.com.furukawa.model.ProdutoEtiqueta
+
+model {
+    List<ProdutoEtiqueta> entities
+    List<GrupoRecurso> listGrupoRecurso
+    int total
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "produtoEtiqueta")
+    listGrupoRecurso g.render(template: "grupoRecurso", collection: listGrupoRecurso, var:"grupoRecurso")
+    total total
+}

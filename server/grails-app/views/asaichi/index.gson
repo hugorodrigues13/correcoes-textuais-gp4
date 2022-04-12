@@ -1,0 +1,16 @@
+import br.com.furukawa.model.Conector
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    List<LinhaDeProducao> linhasProducao
+    List<Conector> conectores
+    List turnos
+    List observacoes
+}
+
+json {
+    linhasProducao linhasProducao?: []
+    turnos turnos?: []
+    conectores conectores?: []
+    observacoes observacoes?: []
+}

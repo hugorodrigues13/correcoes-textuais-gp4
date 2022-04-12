@@ -1,0 +1,13 @@
+import br.com.furukawa.model.Produto
+
+model {
+    Produto produto
+}
+
+json {
+    codigo produto?.codigo
+    ean13 produto?.codigoEAN13
+    peso produto?.peso
+    pesoEmbalagem produto?.pesoEmbalagem
+    codigosDun g.render(template: 'codigoDun', collection: produto?.codigosDUN, var: 'codigoDun')
+}

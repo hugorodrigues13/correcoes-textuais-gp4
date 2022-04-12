@@ -1,0 +1,22 @@
+import br.com.furukawa.dtos.ApontamentoResponseDTO
+
+model {
+    List messages
+    ApontamentoResponseDTO apontamentoResponseDTO
+    boolean etiquetaImpressa
+}
+
+json {
+    messages messages
+    ordemFabricacao apontamentoResponseDTO?.ordemFabricacao
+    lote apontamentoResponseDTO?.lote
+    codigoProduto apontamentoResponseDTO?.codigoProduto
+    caixa apontamentoResponseDTO?.caixa
+    modelo apontamentoResponseDTO?.modelo
+    comprimento apontamentoResponseDTO?.comprimento
+    ultimoApontamento apontamentoResponseDTO?.ultimoApontamento
+    materiasPrimas g.render(template: "materiaPrima", collection: apontamentoResponseDTO?.materiasPrimas, var: "mp")
+    proximoProcesso apontamentoResponseDTO?.proximoProcesso
+    reprocesso apontamentoResponseDTO?.reprocesso
+    etiquetaImpressa etiquetaImpressa
+}

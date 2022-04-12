@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.ProdutoEBSDTO
+
+model {
+    ProdutoEBSDTO produto
+}
+
+json {
+    codigo produto.codigo
+    descricao produto.descricao
+    fornecedoresListasRoteiros g.render(template: "fornecedorListaRoteiro", collection: produto.fornecedoresListasRoteiros, var: "fornecedorListaRoteiro")
+}

@@ -1,0 +1,14 @@
+import br.com.furukawa.model.Meta
+
+model {
+    Meta meta
+}
+
+json {
+    id meta.id
+    linhaDeProducao meta.linhaDeProducao.nome
+    metaReprocessos meta.metaReprocessos
+    metaHK meta.metaHK
+    inicioVigencia meta.inicioVigencia
+    fimVigencia meta.fimVigencia
+}

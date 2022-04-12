@@ -1,0 +1,13 @@
+import br.com.furukawa.model.Role
+import net.minidev.json.JSONArray
+
+model {
+	Role entityInstance
+	JSONArray permissoes
+}
+
+json {
+	entityInstance g.render(template: "form", model: [entityInstance: entityInstance, permissoes: []])
+	permissoes g.render(template: "permissaoForm", collection: permissoes, var: 'requestmap')
+}
+

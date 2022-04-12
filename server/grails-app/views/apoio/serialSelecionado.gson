@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Apontamento
+
+model {
+    Apontamento apontamento
+}
+
+json {
+    id apontamento.serial.id
+    serial apontamento.serial.getCodigoCompleto()
+    historicoDeApontamentos g.render(template: "historico", collection: apontamento.historico.sort {it.data}, var: "historico")
+    linhaDeProducao g.render(template: "linhaDeProducao", model:[entityInstance: apontamento.linhaDeProducao])
+}

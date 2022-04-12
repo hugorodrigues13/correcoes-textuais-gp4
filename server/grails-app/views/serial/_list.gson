@@ -1,0 +1,36 @@
+import br.com.furukawa.dtos.SerialFabricacaoDTO
+import br.com.furukawa.enums.StatusImpressaoEtiqueta
+import br.com.furukawa.enums.StatusSerialFabricacao
+
+model {
+    SerialFabricacaoDTO serialFabricacaoDTO
+}
+
+json {
+    id serialFabricacaoDTO.id
+    serial serialFabricacaoDTO.serialCompleto
+    codigoOrigem serialFabricacaoDTO.codigoOrigem
+    codigoGerado serialFabricacaoDTO.codigoGerado
+    codigoProduto serialFabricacaoDTO.codigoProduto
+    descricaoProduto serialFabricacaoDTO.descricaoProduto
+    ordemFabricacao serialFabricacaoDTO.ordemFabricacao
+    ordemProducao serialFabricacaoDTO.ordemExterna
+    linhaProducao serialFabricacaoDTO.linhaProducao
+    grupoLinhaProducao serialFabricacaoDTO.grupoLinhaProducao
+    status serialFabricacaoDTO.status
+    lote serialFabricacaoDTO.lote
+    statusImpressaoEtiqueta serialFabricacaoDTO.getStatusImpressao()
+    caixa serialFabricacaoDTO.caixa
+    podeReimprimirEtiqueta serialFabricacaoDTO.status != StatusSerialFabricacao.PENDENTE_APONTAMENTO.name()
+    statusOrdemFabricacao serialFabricacaoDTO.statusOrdemFabricacao
+    statusRomaneio serialFabricacaoDTO.statusRomaneio
+    codigoRomaneio serialFabricacaoDTO.codigoRomaneio
+    dataFinalizacao serialFabricacaoDTO.dataFinalizacao
+    codigoNF serialFabricacaoDTO.codigoNF
+    ultimoApontamento serialFabricacaoDTO.ultimoApontamento
+    dataRomaneio serialFabricacaoDTO.dataRomaneio
+    dataSucateamento serialFabricacaoDTO.dataSucateamento
+    statusWip serialFabricacaoDTO.statusWip
+    idOrdemFabricacao serialFabricacaoDTO.idOrdemFabricacao
+    statusLote serialFabricacaoDTO.statusLote
+}

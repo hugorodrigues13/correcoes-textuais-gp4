@@ -1,0 +1,9 @@
+import br.com.furukawa.model.LogOperacao
+
+model {
+    LogOperacao logOperacao
+}
+
+json {
+    entity g.render(template: "list", model: [logOperacao: logOperacao])
+}

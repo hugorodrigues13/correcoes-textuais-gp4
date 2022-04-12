@@ -1,0 +1,10 @@
+import br.com.furukawa.dtos.FornecedorEBSDTO
+
+model {
+    FornecedorEBSDTO fornecedor
+}
+
+json {
+    vendorID fornecedor.vendorID
+    vendorName fornecedor.vendorName
+}

@@ -1,0 +1,10 @@
+import br.com.furukawa.model.Organizacao
+
+model {
+	Organizacao organizacao
+}
+
+json {
+	id organizacao.id
+	nome organizacao.descricao
+}

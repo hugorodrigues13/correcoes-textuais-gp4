@@ -1,0 +1,11 @@
+import br.com.furukawa.model.Turno
+
+model {
+    Turno turno
+}
+
+json {
+    id turno.id
+    nome turno.nome
+    duracoes g.render(template: 'list', collection: turno.duracoes, var: 'duracao')
+}

@@ -1,0 +1,12 @@
+import br.com.furukawa.enums.StatusOrdemDeProducaoWIP
+import br.com.furukawa.model.OrdemDeProducao
+
+model {
+    OrdemDeProducao entityInstance
+    List<StatusOrdemDeProducaoWIP> listTipoStatusOracle
+}
+
+json {
+    entityInstance g.render(template: "form", model:[entity: entityInstance])
+    listTipoStatusOracle listTipoStatusOracle
+}

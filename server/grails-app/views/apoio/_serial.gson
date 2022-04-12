@@ -1,0 +1,12 @@
+import br.com.furukawa.model.SerialFabricacao
+
+model {
+    SerialFabricacao serial
+}
+
+json {
+    id serial.id
+    serial serial.getCodigoCompleto()
+    descricao serial.ordemDeFabricacao.descricaoDoProduto
+    linhaDeProducao serial.getApontamento()?.getLinhaDeProducaoId()
+}

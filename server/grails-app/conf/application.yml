@@ -1,0 +1,259 @@
+---
+server:
+    contextPath: '/gp4'
+
+grails:
+    resources:
+        pattern: /**
+    web:
+        disable:
+            multipart: false
+---
+grails:
+    profile: react
+    codegen:
+        defaultPackage: gp4
+    gorm:
+        reactor:
+            # Whether to translate GORM events into Reactor events
+            # Disabled by default for performance reasons
+            events: false
+info:
+    app:
+        name: '@info.app.name@'
+        version: '@info.app.version@'
+        grailsVersion: '@info.app.grailsVersion@'
+spring:
+    jmx:
+        unique-names: true
+    main:
+        banner-mode: "off"
+management:
+    endpoints:
+        enabled-by-default: false
+
+# Spring Actuator Endpoints are Disabled by Default
+
+
+---
+grails:
+    mime:
+        disable:
+            accept:
+                header:
+                    userAgents:
+                        - Gecko
+                        - WebKit
+                        - Presto
+                        - Trident
+        types:
+            json:
+                - application/json
+                - text/json
+            hal:
+                - application/hal+json
+                - application/hal+xml
+            xml:
+                - text/xml
+                - application/xml
+            atom: application/atom+xml
+            css: text/css
+            csv: text/csv
+            js: text/javascript
+            rss: application/rss+xml
+            text: text/plain
+            all: '*/*'
+    urlmapping:
+        cache:
+            maxsize: 1000
+    controllers:
+        defaultScope: singleton
+    converters:
+        encoding: UTF-8
+
+---
+grails:
+    cors:
+        enabled: true
+---
+grails:
+    plugin:
+        auditLog:
+            auditDomainClassName: br.com.furukawa.model.AuditLog
+---
+hibernate:
+    cache:
+        queries: false
+        use_second_level_cache: false
+        use_query_cache: false
+
+dataSource:
+    pooled: true
+    jmxExport: true
+    driverClassName: oracle.jdbc.OracleDriver
+    dialect: org.hibernate.dialect.Oracle10gDialect
+
+environments:
+    development:
+        dataSource:
+            #GP4.0 DEV
+            dbCreate: none
+            url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS=(PROTOCOL=tcp)(HOST=10.41.112.27)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=FABDEV.furukawa.corp)))
+            username: gp40
+            password: gp40
+
+            #GP4.0 HML
+#            dbCreate: update
+#            url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS=(PROTOCOL=tcp)(HOST=10.41.112.161)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=FABHML.furukawa.corp)))
+#            username: gp40
+#            password: gp40
+
+            #sipphml2
+#            dbCreate: update
+#            url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS=(PROTOCOL=tcp)(HOST=10.41.112.153)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=FABHML2.furukawa.corp)))
+#            username: sipp
+#            password: sipp
+
+            logSql: true
+            formatSql: true
+    test:
+        dataSource:
+            dbCreate: none
+            username: obeyaka
+            password: obeyaka
+            url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS=(PROTOCOL=tcp)(HOST=10.41.112.161)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=FABHML.furukawa.corp)))
+    production:
+        dataSource:
+            jndiName: 'java:comp/env/gp40DataSource'
+            #GP4.0 DEV
+#            dbCreate: update
+#            url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS=(PROTOCOL=tcp)(HOST=10.41.112.27)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=FABDEV.furukawa.corp)))
+#            username: gp40
+#            password: gp40
+
+            #GP4.0 HML
+#            dbCreate: update
+#            url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS=(PROTOCOL=tcp)(HOST=10.41.112.161)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=FABHML.furukawa.corp)))
+#            username: gp40
+#            password: gp40
+---
+grails:
+    mail:
+        host: "webmail.furukawa.com.br"
+        #  username: "sistemas"
+        #  password: 'F!$@$!$t&m@$'
+        default.from: "sistemas@furukawa.com.br"
+        props:
+            mail.smtp.auth: "false"
+            mail.transport.protocol: "smtp"
+            mail.from: "sistemas@furukawa.com.br"
+#grails:
+#    mail:
+#        host: "smtp.gmail.com"
+#        port: 465
+#        username: "javamentas@gmail.com"
+#        password: "libelula!@"
+#        props:
+#            mail:
+#                smtp:
+#                    auth: true
+#                    protocol: smtps
+#                    socketFactory:
+#                        port: 465
+#                        class: javax.net.ssl.SSLSocketFactory
+#                        fallback: false
+---
+grails:
+    mailOnException:
+        enabled: true
+        email:
+            to: "marcilio@rav.eti.br, alysson@rav.eti.br"
+            from: "sistemas@furukawa.com.br"
+
+---
+grails:
+    controllers:
+        upload:
+            maxFileSize: 100000000
+            maxRequestSize: 100000000
+---
+grails:
+    plugin:
+        springsecurity:
+            rest:
+                token:
+                    storage:
+                        jwt:
+                            secret: "3b7f220f0674f4281120b4f7aa7997e9210cb9c5a0e1ea93cd098d1b824fa694"
+            userLookup:
+                userDomainClassName: br.com.furukawa.model.User
+                authorityJoinClassName: br.com.furukawa.model.UserRole
+            authority:
+                className: br.com.furukawa.model.Role
+            securityConfigType: 'Requestmap'
+            requestMap:
+                className: br.com.furukawa.model.Requestmap
+            useSecurityEventListener: true
+            password:
+                algorithm: 'SHA-256'
+                hash:
+                    iterations: 1
+            filterChain:
+                chainMap:
+                    -   pattern: /assets/**
+                        filters: none
+                    -   pattern: /**/js/**
+                        filters: none
+                    -   pattern: /**/css/**
+                        filters: none
+                    -   pattern: /**/images/**
+                        filters: none
+                    - # Stateless chain
+                        pattern: /api/**
+                        filters: JOINED_FILTERS,-anonymousAuthenticationFilter,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter,-rememberMeAuthenticationFilter
+                    - # Traditional Chain
+                        pattern: /recuperarSenha/**
+                        filters: JOINED_FILTERS,-restTokenValidationFilter,-restExceptionTranslationFilter
+
+                controllerAnnotations:
+                    staticRules:
+                        -   pattern: /
+                            access:
+                                - permitAll
+                        -   pattern: /error
+                            access:
+                                - permitAll
+                        -   pattern: /index
+                            access:
+                                - permitAll
+                        -   pattern: /index.gsp
+                            access:
+                                - permitAll
+                        -   pattern: /shutdown
+                            access:
+                                - permitAll
+                        -   pattern: /assets/**
+                            access:
+                                - permitAll
+                        -   pattern: /**/js/**
+                            access:
+                                - permitAll
+                        -   pattern: /**/css/**
+                            access:
+                                - permitAll
+                        -   pattern: /**/images/**
+                            access:
+                                - permitAll
+                        -   pattern: /**/favicon.ico/**
+                            access:
+                                - permitAll
+        auditLog:
+            auditDomainClassName: br.com.furukawa.model.AuditLog
+---
+quartz:
+    autoStartup: true
+    jdbcStore: true
+    waitForJobsToCompleteOnShutdown: true
+
+    props:
+        scheduler.skipUpdateCheck: false

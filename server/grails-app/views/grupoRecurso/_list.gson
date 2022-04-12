@@ -1,0 +1,17 @@
+import br.com.furukawa.dtos.GrupoRecursoEntitiesDTO
+
+model{
+    GrupoRecursoEntitiesDTO grupoRecursoEntitiesDTO
+}
+
+json{
+    id grupoRecursoEntitiesDTO.id
+    nome grupoRecursoEntitiesDTO.nome
+    operacao grupoRecursoEntitiesDTO.operacao
+    tempoPadrao grupoRecursoEntitiesDTO.tempoPadrao
+    tempoMaximoSemApontamento grupoRecursoEntitiesDTO.tempoMaximoSemApontamento
+    isAtivo grupoRecursoEntitiesDTO.isAtivo
+    status grupoRecursoEntitiesDTO.getStatus()
+    recursos g.render(template: "recursoForm", collection: grupoRecursoEntitiesDTO.recursos, var: "grupoRecurso")
+    regras g.render(template: "regra", collection: grupoRecursoEntitiesDTO.regras, var: "regra")
+}

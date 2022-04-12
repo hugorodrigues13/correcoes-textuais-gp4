@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Defeito
+import br.com.furukawa.model.GrupoRecurso
+
+model {
+    Defeito entityInstance
+    List<GrupoRecurso> listGrupoRecurso
+}
+
+json {
+    entityInstance g.render(template: "form", model: [entityInstance: entityInstance])
+    listGrupoRecurso g.render(template: 'grupoRecursoList', collection: listGrupoRecurso, var: 'grupoRecurso')
+}

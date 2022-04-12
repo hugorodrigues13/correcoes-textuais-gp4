@@ -1,0 +1,10 @@
+import br.com.furukawa.model.ClassePorPlanejador
+
+model {
+    ClassePorPlanejador entityInstance
+}
+
+json {
+    classeContabil entityInstance.classeContabil
+    planejadores entityInstance.planejadores
+}

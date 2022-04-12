@@ -1,0 +1,14 @@
+import br.com.furukawa.dtos.DefeitoDTO
+import br.com.furukawa.model.GrupoRecurso
+
+model {
+    List<DefeitoDTO> entities
+    List<GrupoRecurso> listGrupoRecurso
+    int total
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "defeito")
+    listGrupoRecurso g.render(template: "grupoRecursoList", collection: listGrupoRecurso, var: "grupoRecurso")
+    total total
+}

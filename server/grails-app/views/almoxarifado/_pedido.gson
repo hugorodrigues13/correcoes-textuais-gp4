@@ -1,0 +1,15 @@
+import br.com.furukawa.dtos.PedidoReposicaoMaterialDTO
+
+model {
+    PedidoReposicaoMaterialDTO pedido
+}
+
+json {
+    id pedido.id
+    recursoNome pedido.recursoNome
+    linha pedido.linha
+    chavePrimaria pedido.chavePrimaria
+    previsaoEntrega pedido.previsaoEntrega
+    liberado pedido.isLiberado
+    itens g.render(template: "itensPedido", collection: pedido.itens, var: "item")
+}

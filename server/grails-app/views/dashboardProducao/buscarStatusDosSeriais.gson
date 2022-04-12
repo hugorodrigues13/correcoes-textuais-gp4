@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.StatusSeriaisGraficoDTO
+
+model {
+    List<StatusSeriaisGraficoDTO> statusSeriais
+}
+
+json{
+    statusSeriais g.render(template: 'statusSeriais', collection: statusSeriais.sort{it.ordem}, var: 'statusSerial')
+}

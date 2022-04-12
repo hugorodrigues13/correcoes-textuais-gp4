@@ -1,0 +1,22 @@
+import br.com.furukawa.dtos.OrdemDeFabricacaoDTO
+import br.com.furukawa.enums.StatusOrdemDeProducaoWIP
+import br.com.furukawa.enums.StatusOrdemFabricacao
+import br.com.furukawa.model.Impressora
+
+model {
+    List<OrdemDeFabricacaoDTO> entities
+    Integer total
+    List<StatusOrdemFabricacao> status
+    List<StatusOrdemDeProducaoWIP> statusWIP
+    List<StatusOrdemFabricacao> filtroStatusPadrao
+    List<Impressora> impressoras
+}
+
+json{
+    entities g.render(template: "list", collection: entities, var: "ordemDeFabricacao")
+    impressoras g.render(template: "impressora", collection: impressoras, var: "impressora")
+    total total
+    status status
+    statusWIP statusWIP
+    filtroStatusPadrao filtroStatusPadrao
+}

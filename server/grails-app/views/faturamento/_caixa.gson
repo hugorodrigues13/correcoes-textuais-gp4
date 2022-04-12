@@ -1,0 +1,14 @@
+import br.com.furukawa.model.ImpressaoApontamentoCaixa
+
+model {
+    ImpressaoApontamentoCaixa caixa
+}
+
+json {
+    id caixa.id
+    numeroCaixa caixa.numeroCaixa
+    recurso caixa.recurso?.nome
+    linhaProducao caixa.linhaDeProducao?.nome
+    total caixa.impressaoLote.getQuantidadePorCaixa()
+    apontados caixa.seriais.size()
+}

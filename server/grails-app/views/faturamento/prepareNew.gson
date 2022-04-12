@@ -1,0 +1,10 @@
+import br.com.furukawa.model.Lote
+
+model {
+    Lote entityInstance
+}
+
+json {
+    entityInstance g.render(template: 'form', model:[lote: entityInstance])
+
+}

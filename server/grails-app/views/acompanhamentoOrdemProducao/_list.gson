@@ -1,0 +1,37 @@
+import br.com.furukawa.dtos.OrdemDeProducaoDTO
+
+model {
+    OrdemDeProducaoDTO ordemDeProducao
+}
+
+json{
+    id ordemDeProducao.id
+    ordemDeProducao ordemDeProducao.codigoOrdem
+    status ordemDeProducao.status
+    codigoProduto ordemDeProducao.codigoProduto
+    descricaoProduto ordemDeProducao.descricaoProduto
+    lista ordemDeProducao.lista ?: '00'
+    roteiro ordemDeProducao.roteiro ?: '00'
+    fornecedor ordemDeProducao.fornecedor
+    pedido ordemDeProducao.pedido
+    quantidade ordemDeProducao.quantidade
+    quantidadeEntregue ordemDeProducao.quantidadeEntregue
+    quantidadeRestante ordemDeProducao.quantidadeRestante
+    quantidadePendenteRomaneio ordemDeProducao.quantidadePendenteRomaneio
+    quantidadeTransito ordemDeProducao.quantidadeTransito
+    planejador ordemDeProducao.planejador
+    dataCriacao ordemDeProducao.dataCriacao
+    dataPrevisaoFinalizacao ordemDeProducao.dataPrevisaoFinalizacao
+    erroExportacao ordemDeProducao.erroExportacao
+    statusOracle ordemDeProducao.statusOracle
+    release ordemDeProducao.release
+    codigoServico ordemDeProducao.codigoServico
+    linha ordemDeProducao.linha
+    justificativa ordemDeProducao.justificativa
+    totalSequenciado ordemDeProducao.totalSequenciado
+    totalPecasProducao ordemDeProducao.totalPecasProducao
+    totalPecasFinalizadas ordemDeProducao.totalPecasFinalizadas
+    modelo ordemDeProducao.modelo
+    comprimento ordemDeProducao.comprimento
+    grupoLinhas ordemDeProducao.grupoLinhas
+}

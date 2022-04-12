@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Conector
+
+model {
+    Conector conector
+}
+
+json{
+    id conector.id
+    descricao conector.descricao
+    linhaForecast conector.linhaForecast
+    formacao conector.formacao
+}

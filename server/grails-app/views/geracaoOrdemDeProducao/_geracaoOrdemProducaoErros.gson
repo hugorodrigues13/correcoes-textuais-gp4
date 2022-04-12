@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.GeracaoOrdemProducaoErrosDTO
+
+model {
+    GeracaoOrdemProducaoErrosDTO geracaoOrdemProducaoErrosDTO
+}
+
+json {
+    index geracaoOrdemProducaoErrosDTO.index
+    message geracaoOrdemProducaoErrosDTO.message
+    value geracaoOrdemProducaoErrosDTO.value
+}

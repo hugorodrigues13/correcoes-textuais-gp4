@@ -1,0 +1,67 @@
+****************************************** Atualização 20/07 ******************************************
+
+********** Geral **********
+- Nas telas que permitem a escolha dos filtros da listagem, mostrar opção para salvar os filtros escolhidos pelo usuário.
+- Salvar em cache qual foi o ultimo fornecedor/organização a pessoa estava logada.
+- Mostrar fornecedor e organização logados no menu.
+
+
+********** Programação **********
+Geração de Ordens de Produção
+- Permitir informar uma justificativa para a priorização da ordem.
+- Mostrar detalhes do roteiro e lista de materiais.
+- Na geração em massa, permitir a escolha do fornecedor para validação e colocar um aviso que as OPs estão sendo criadas.
+
+Acompanhamento de Ordens de Produção
+- Atualizar a data de previsão de finalização.
+- Mostrar Total Sequenciado, Total de Peças em Produção e Total de Peças Finalizadas na Fábrica.
+- Correção para exportar ordens geradas no dia atual.
+
+Dashboard de Programação
+- Mostrar ordens com prazo para hoje, para os próximos 7 dias e para os próximos 30 dias, as ordens atrasadas e permitir filtrar por grupo de linhas.
+
+
+********** Cadastros **********
+Grupo de Recursos
+- Salvar o tempo padrão e tempo máximo sem apontamentos, em segundos.
+- Permitir adicionar motivos de parada.
+
+Linha de Produção
+- Permitir alterar o nome da linha.
+
+Motivos de Parada
+- Criação do cadastro.
+
+********** Configurações **********
+Gerenciamento de Etiquetas
+- Alterar de "Quantidade por impressão" para "Cópias" e "Quantidade de etiquetas" para "Quantidade".
+- Deixar a etiqueta da Ordem de Fabricação configurável.
+
+Configurações Gerais
+- Corrigir Paginação
+
+
+********** Produção **********
+Dashboard de Produção
+- Mostrar filtros, melhorar layout dos gráficos.
+
+Apontamento
+- Permitir o apontamento caso a linha escolhida seja de uma versão anterior.
+- Gerenciamento de paradas.
+- Impressões: Número da caixa para rastreabilidade.
+- Salvar tempo de apontamento por produto.
+
+Seriais
+- Opção para imprimir a etiqueta de um serial apenas.
+
+Gerenciamento de Tempos de Apontamento por Produto
+- Criação da tela.
+
+
+********** Segurança **********
+Usuário
+- Ordenar os perfis do formulário por nome.
+
+Acesso
+- Correção para não mostrar fornecedores repetidos na listagem.
+

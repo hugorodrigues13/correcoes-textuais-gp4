@@ -1,0 +1,15 @@
+import br.com.furukawa.model.ProdutoEtiqueta
+
+model {
+    ProdutoEtiqueta entityInstance
+}
+
+json {
+    id entityInstance.id
+    codigoProduto entityInstance.codigoProduto
+    quantidadeDeEtiquetas entityInstance.quantidadeDeEtiquetas
+    quantidadePorImpressao entityInstance.quantidadePorImpressao
+    serial entityInstance.serial
+    etiquetas entityInstance.etiquetas
+    grupos entityInstance.grupos*.id
+}

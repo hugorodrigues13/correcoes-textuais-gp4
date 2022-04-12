@@ -1,0 +1,12 @@
+import br.com.furukawa.model.GrupoLinhaDeProducao
+
+model {
+    GrupoLinhaDeProducao grupo
+}
+
+json{
+    id grupo.id
+    key grupo.id
+    nome grupo.nome
+    value grupo.nome
+}

@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Role
+
+model {
+	List<Role> entities
+	int total
+}
+
+json {
+	entities g.render(template: "list", collection: entities, var: "perfil")
+	total total
+}
+

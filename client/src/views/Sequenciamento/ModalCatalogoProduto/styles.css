@@ -1,0 +1,11 @@
+ .sequenciamento-catalogo table{
+  font-size: 10px;
+}
+
+.sequenciamento-catalogo table thead {
+  font-size: 13px;
+}
+
+ .sequenciamento-catalogo-modal .ant-modal-title{
+   font-size: 13px;
+ }

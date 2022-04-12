@@ -1,0 +1,13 @@
+import br.com.furukawa.dtos.RomaneioEBSDTO
+
+model {
+    RomaneioEBSDTO romaneio
+}
+
+json {
+    ordemDeProducao romaneio.ordemDeProducao
+    lote romaneio.getLote().collect({"${it.getCodigoLote()} (${it.getQuantidadePorOP(romaneio.ordemDeProducao)})"}).join(", ")
+    codigo romaneio.codigoProduto
+    servico romaneio.servico
+    valido romaneio.valido
+}

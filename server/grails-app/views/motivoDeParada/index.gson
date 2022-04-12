@@ -1,0 +1,14 @@
+import br.com.furukawa.dtos.MotivoDeParadaDTO
+import br.com.furukawa.enums.TipoMotivoParada
+
+model {
+    List<MotivoDeParadaDTO> entities
+    Integer total
+    List<TipoMotivoParada> tipos
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "motivoParada")
+    total total
+    tipos tipos
+}

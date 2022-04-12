@@ -1,0 +1,13 @@
+import net.minidev.json.JSONObject
+
+model {
+	JSONObject requestmap
+}
+
+json {
+	id requestmap.id
+	parent requestmap.parent
+	text requestmap.text
+	state requestmap.state
+	icon requestmap.icon
+}

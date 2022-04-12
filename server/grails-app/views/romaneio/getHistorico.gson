@@ -1,0 +1,9 @@
+import br.com.furukawa.model.HistoricoRomaneio
+
+model {
+    List<HistoricoRomaneio> listHistorico
+}
+
+json {
+    historico g.render(template: "listHistorico", collection: listHistorico, var: "historico")
+}

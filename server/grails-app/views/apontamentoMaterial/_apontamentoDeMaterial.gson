@@ -1,0 +1,15 @@
+import br.com.furukawa.model.ApontamentoDeMaterial
+
+model {
+    ApontamentoDeMaterial apontamentoDeMaterial
+}
+
+json {
+    codigoProduto apontamentoDeMaterial.codigoProduto
+    codigoLote apontamentoDeMaterial.codigoLote
+    quantidade apontamentoDeMaterial.quantidade
+    ordemDeProducao apontamentoDeMaterial.ordemDeProducao
+    tipo apontamentoDeMaterial.tipo
+    data apontamentoDeMaterial.dataCriacaoFormadata()
+    usuario apontamentoDeMaterial.usuarioCriacao
+}

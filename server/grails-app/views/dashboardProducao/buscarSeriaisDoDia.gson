@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.DadosGraficoSeriaisApontadosUltimas24HorasDTO
+
+model {
+    DadosGraficoSeriaisApontadosUltimas24HorasDTO dadosSeriais
+}
+
+json{
+    dadosPorHora g.render(template: 'horaGraficoSeriais', collection: dadosSeriais.dadosPorHora.sort {it.ordem}, var: 'hora')
+}

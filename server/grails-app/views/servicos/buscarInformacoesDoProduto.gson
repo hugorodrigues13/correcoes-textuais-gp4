@@ -1,0 +1,9 @@
+import br.com.furukawa.model.Produto
+
+model {
+    Produto produto
+}
+
+json {
+    produto g.render(template: "produto", model: [produto: produto])
+}

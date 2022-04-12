@@ -1,0 +1,12 @@
+import br.com.furukawa.model.ProdutoGrupoLinhaDeProducao
+
+model {
+    ProdutoGrupoLinhaDeProducao produto
+}
+
+json {
+    codigo produto.codigo
+    roteiro produto.roteiro
+    agrupamento produto.isAgrupamento()
+    quantidadePorPallet produto.quantidadePorPallet
+}

@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.ebs.LoteTransacao
+import br.com.furukawa.model.ApontamentoDeMaterial
+
+model {
+    List<ApontamentoDeMaterial> entities
+    Integer totalCount
+}
+
+json {
+    entities g.render(template: 'apontamentoDeMaterial', collection: entities, var: 'apontamentoDeMaterial')
+}

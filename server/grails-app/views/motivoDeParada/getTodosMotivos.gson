@@ -1,0 +1,7 @@
+model {
+    List<String> motivos
+}
+
+json {
+    motivos motivos
+}

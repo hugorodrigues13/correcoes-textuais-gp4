@@ -1,0 +1,15 @@
+import br.com.furukawa.enums.TipoMotivoParada
+import br.com.furukawa.model.GrupoRecurso
+import br.com.furukawa.model.MotivoDeParada
+
+model {
+    MotivoDeParada entityInstance
+    List<TipoMotivoParada> tipos
+    List<GrupoRecurso> listGrupoRecurso
+}
+
+json {
+    entityInstance g.render(template: "form", model:[motivoParada: entityInstance])
+    tipos tipos
+    listGrupoRecurso g.render(template: "grupoRecurso", collection: listGrupoRecurso, var: "grupoRecurso")
+}

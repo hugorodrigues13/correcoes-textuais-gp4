@@ -1,0 +1,12 @@
+import br.com.furukawa.model.GrupoLinhaDeProducao
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    GrupoLinhaDeProducao entityInstance
+    List<LinhaDeProducao> listGrupoLinhaProducao
+}
+
+json {
+    entityInstance g.render(template: 'form', model:["entityInstance": entityInstance])
+    listGrupoLinhaProducao g.render(template: "linhaDeProducaoForm", collection: listGrupoLinhaProducao, var: "linhaDeProducao")
+}

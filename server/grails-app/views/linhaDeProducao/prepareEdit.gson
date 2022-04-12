@@ -1,0 +1,14 @@
+import br.com.furukawa.model.LinhaDeProducao
+import br.com.furukawa.model.GrupoRecurso
+
+model {
+	LinhaDeProducao entityInstance
+	List<GrupoRecurso> listGrupoRecurso
+	boolean isUltimaVersao
+}
+
+json {
+	entityInstance g.render(template: "form", model: [entityInstance: entityInstance] )
+	listGrupoRecurso g.render(template: "grupoRecursoForm", collection: listGrupoRecurso, var: 'grupoRecurso')
+	isUltimaVersao isUltimaVersao
+}

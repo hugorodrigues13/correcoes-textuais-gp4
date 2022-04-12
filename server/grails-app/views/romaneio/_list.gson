@@ -1,0 +1,17 @@
+import br.com.furukawa.dtos.RomaneioListaDTO
+
+model {
+    RomaneioListaDTO romaneioListaDTO
+}
+
+json {
+    id romaneioListaDTO.id
+    romaneio romaneioListaDTO.numero + "/" + romaneioListaDTO.ano
+    notaFiscalEncomenda romaneioListaDTO.notaFiscalEncomenda
+    notaFiscalRetorno romaneioListaDTO.notaFiscalRetorno
+    emissao romaneioListaDTO.emissao
+    status romaneioListaDTO.status
+    quantidadeTotal romaneioListaDTO.quantidadeTotal
+    valorTotal romaneioListaDTO.valorTotal
+    editable romaneioListaDTO.editable
+}

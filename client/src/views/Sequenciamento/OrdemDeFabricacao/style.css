@@ -1,0 +1,15 @@
+.mudarDirection > .ant-badge-count {
+  direction: ltr !important;
+  top: 5px !important;
+  right: 15px !important;
+  width: 45px!important;
+}
+
+.mudarDirection > .ant-input-borderless:hover, .ant-input-borderless:focus {
+  background-color: #ff4d4f !important;
+  width: 50px !important;
+}
+
+.mudarDirection > .ant-badge-count > input {
+  transform: none!important;
+}

@@ -1,0 +1,11 @@
+import br.com.furukawa.model.ClassePorPlanejador
+
+model {
+    ClassePorPlanejador entityInstance
+    List<String> planejadores
+}
+
+json {
+    entityInstance g.render(template: 'form', model:[entityInstance: entityInstance])
+    planejadores planejadores
+}

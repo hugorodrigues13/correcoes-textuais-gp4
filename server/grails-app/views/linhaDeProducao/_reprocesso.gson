@@ -1,0 +1,12 @@
+import br.com.furukawa.model.ReprocessoLinhaDeProducao
+
+model {
+    ReprocessoLinhaDeProducao reprocesso
+}
+
+json{
+    id reprocesso.id
+    processoOrigem reprocesso.processoOrigemId
+    ordemRetorno reprocesso.ordemProcessoRetorno
+    defeito reprocesso.defeitoId
+}

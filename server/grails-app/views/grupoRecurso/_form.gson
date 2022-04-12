@@ -1,0 +1,19 @@
+import br.com.furukawa.model.GrupoRecurso
+
+model {
+	GrupoRecurso entityInstance
+}
+
+json {
+	id entityInstance.id
+	nome entityInstance.nome
+	recursos entityInstance.recursos*.id
+    defeitos entityInstance.defeitos*.id
+	tempoPadrao entityInstance.tempoPadrao
+	tempoMaximoSemApontamento entityInstance.tempoMaximoSemApontamento
+	operacao entityInstance.operacao
+	motivosParadas entityInstance.motivosDeParada*.id
+	camposRastreaveis entityInstance.camposRastreaveis
+	permiteApontamentoOF entityInstance.permiteApontamentoOF
+	regras g.render(template: "regra", collection: entityInstance.regras, var: "regra")
+}

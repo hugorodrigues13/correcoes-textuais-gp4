@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.OrdemDeVendaEBSDTO
+
+model {
+    List<OrdemDeVendaEBSDTO> ordens
+}
+
+json{
+    ordens g.render(template: "ordemDeVenda", collection: ordens, var: "ordemDeVenda")
+}

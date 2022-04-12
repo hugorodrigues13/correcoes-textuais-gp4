@@ -1,0 +1,10 @@
+import br.com.furukawa.model.RomaneioNotaFiscal
+
+model {
+    RomaneioNotaFiscal notaFiscal
+}
+
+json {
+    codigo notaFiscal?.codigo
+    status notaFiscal?.status
+}

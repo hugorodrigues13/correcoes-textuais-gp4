@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Role
+
+model {
+	Role perfil
+}
+
+json {
+	key perfil.id
+	value perfil.nome
+	name perfil.nome
+	descricao perfil.descricao
+}

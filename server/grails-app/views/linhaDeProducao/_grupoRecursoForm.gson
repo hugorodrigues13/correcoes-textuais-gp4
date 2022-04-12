@@ -1,0 +1,17 @@
+import br.com.furukawa.model.GrupoRecurso
+
+model {
+	GrupoRecurso grupoRecurso
+}
+
+json {
+	key grupoRecurso.id
+	value grupoRecurso.nome
+	op grupoRecurso.operacao
+	primeiroDaLinha grupoRecurso.primeiroDaLinha
+	recursos_id grupoRecurso.recursos*.id
+	recursos_nome grupoRecurso.recursos*.nome
+	defeito_id grupoRecurso.defeitos*.id
+	defeito_nome grupoRecurso.defeitos*.nome
+	listDefeitos g.render(template:"defeitos", collection: grupoRecurso.defeitos, var: "listDefeito")
+}

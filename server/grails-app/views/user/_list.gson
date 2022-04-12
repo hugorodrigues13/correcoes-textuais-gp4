@@ -1,0 +1,24 @@
+import br.com.furukawa.model.Acesso
+import br.com.furukawa.model.Role
+import br.com.furukawa.model.User
+
+model {
+    User user
+    List<Role> perfis
+    List<Acesso> acessos
+}
+json {
+    id user.id
+    fullname user.fullname
+    email user.email
+    username user.username
+    enabled user.enabled
+    matricula user.matricula
+    perfil user.authorities*.nome.join(", ")
+    isRemovivel user.isRemovivel
+    isEditavel user.usuarioPodeSerEditadoPeloUsuarioLogado(perfis, acessos)
+    usuarioCriacao user.usuarioCriacao
+    usuarioAlteracao user.usuarioAlteracao
+    dataCriacao user.dataCriacao
+    dataAtualizacao user.dataAtualizacao
+}

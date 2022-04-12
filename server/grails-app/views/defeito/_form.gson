@@ -1,0 +1,11 @@
+import br.com.furukawa.model.Defeito
+
+model {
+    Defeito entityInstance
+}
+
+json {
+    id entityInstance.id
+    nome entityInstance.nome
+    grupos entityInstance.grupos*.id
+}

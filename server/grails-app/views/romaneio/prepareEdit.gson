@@ -1,0 +1,9 @@
+import br.com.furukawa.model.Romaneio
+
+model {
+    Romaneio entity
+}
+
+json {
+    entity g.render(template: "form", model:[romaneio: entity])
+}

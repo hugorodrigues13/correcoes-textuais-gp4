@@ -1,0 +1,16 @@
+import br.com.furukawa.model.Role
+
+model {
+	Role entityInstance
+	List<Long> permissoes
+}
+
+json {
+	id entityInstance.id
+	authority entityInstance.authority
+	descricao entityInstance.descricao
+	nome entityInstance.nome
+	isEditavel entityInstance.isEditavel
+	isRemovivel entityInstance.isRemovivel
+	permissoes permissoes
+}

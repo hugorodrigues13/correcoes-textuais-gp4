@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Parada
+
+model {
+    Parada parada
+}
+
+json {
+    id parada?.id
+    inicio parada?.inicio
+    fim parada?.fim
+    motivo  g.render(template: 'motivoParada', model:[motivoParada: parada?.motivo])
+}

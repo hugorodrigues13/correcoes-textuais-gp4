@@ -1,0 +1,12 @@
+import br.com.furukawa.dtos.ItemPedidoReposicaoMaterialDTO
+
+model {
+    ItemPedidoReposicaoMaterialDTO item
+}
+
+json {
+    id item.id
+    codigoProduto item.codigoProduto
+    descricaoProduto item.descricaoProduto
+    quantidade item.quantidade
+}

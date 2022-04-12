@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.PedidoReposicaoMaterialDTO
+
+model {
+    List<PedidoReposicaoMaterialDTO> entities
+    Integer total
+}
+
+json{
+    entities g.render(template: "pedido", collection: entities, var: "pedido")
+    total total
+}

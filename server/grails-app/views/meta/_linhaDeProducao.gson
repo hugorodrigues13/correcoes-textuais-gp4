@@ -1,0 +1,10 @@
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    LinhaDeProducao linhaDeProducao
+}
+
+json {
+    id linhaDeProducao.id
+    nome linhaDeProducao.nome
+}

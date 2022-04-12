@@ -1,0 +1,14 @@
+import br.com.furukawa.model.Lote
+
+model {
+    Lote lote
+}
+
+json {
+    id lote.id
+    lote lote.getCodigoLote()
+    codigo lote.codigoProduto
+    descricao lote.descricaoProduto
+    quantidade lote.quantidade
+
+}

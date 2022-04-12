@@ -1,0 +1,21 @@
+import br.com.furukawa.model.Acesso
+import br.com.furukawa.model.Organizacao
+import br.com.furukawa.model.Role
+import br.com.furukawa.model.User
+
+model {
+	User entityInstance
+	List<Role> perfis
+	List<Organizacao> organizacoes
+	List<Acesso> acessos
+	List<String> planejadores
+}
+
+json {
+	entityInstance g.render(template: "form", model: [entityInstance: entityInstance])
+	perfis g.render(template: "perfilForm", collection: perfis, var: 'perfil')
+	organizacoes g.render(template: "organizacaoForm", collection: organizacoes, var: 'organizacao')
+	acessos g.render(template: "acessoForm", collection: acessos, var: 'acesso')
+	planejadores planejadores
+}
+

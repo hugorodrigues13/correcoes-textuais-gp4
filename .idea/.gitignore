@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\ALEX\IdeaProjects\gpa\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+/dataSources/d8991d13-535a-4434-926a-3b03bd91ad4e.xml
+/dataSources/5f006c2e-0e34-4b96-b224-23897217e780.xml
+/dataSources.xml
+/jarRepositories.xml
+/dataSources/5f006c2e-0e34-4b96-b224-23897217e780/storage_v2/_src_/schema/OBEYAKA.MOqhxw.meta
+/dataSources/5f006c2e-0e34-4b96-b224-23897217e780/storage_v2/_src_/schema/OBEYAKA.MOqhxw.zip
+/dataSources/5f006c2e-0e34-4b96-b224-23897217e780/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta
+/dataSources/5f006c2e-0e34-4b96-b224-23897217e780/storage_v2/_src_/schema/SYS.rUIBAA.meta
+/dataSources/5f006c2e-0e34-4b96-b224-23897217e780/storage_v2/_src_/schema/SYSTEM.L2avkg.meta

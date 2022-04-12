@@ -1,0 +1,9 @@
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    LinhaDeProducao entityInstance
+}
+
+json{
+    entityInstance g.render(template: "formUpdate", model: [entityInstance: entityInstance])
+}

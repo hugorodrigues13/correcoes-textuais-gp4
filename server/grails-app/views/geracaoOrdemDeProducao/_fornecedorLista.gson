@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.FornecedorListaEBSDTO
+
+model {
+    FornecedorListaEBSDTO lista
+}
+
+json {
+    nomeFornecedor lista.nomeFornecedor
+    idFornecedor lista.idFornecedor
+    lista lista.lista
+}

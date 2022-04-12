@@ -1,0 +1,26 @@
+import br.com.furukawa.dtos.OrdemDeFabricacaoDTO
+
+model {
+    OrdemDeFabricacaoDTO ordemDeFabricacao
+}
+
+json {
+    id ordemDeFabricacao.id
+    ordemFabricacao ordemDeFabricacao.ordemFabricacao
+    codigoProduto ordemDeFabricacao.codigoProduto
+    descricaoProduto ordemDeFabricacao.descricaoProduto
+    grupoLinhasProducao ordemDeFabricacao.grupoLinhasProducao
+    linhaProducao ordemDeFabricacao.linhaProducao
+    ordemProducao ordemDeFabricacao.ordemProducao
+    status ordemDeFabricacao.status
+    statusWIP ordemDeFabricacao.statusWIP
+    justificativa ordemDeFabricacao.justificativa
+    dataCriacao ordemDeFabricacao.dataCriacao
+    ordemSequenciamento ordemDeFabricacao.ordemSequenciamento
+    cliente ordemDeFabricacao.cliente
+    comprimento ordemDeFabricacao.comprimento
+    quantidadeProgramada ordemDeFabricacao.quantidadeProgramada
+    quantidadeProduzida ordemDeFabricacao.quantidadeProduzida
+    dataPrevisaoFinalizacao ordemDeFabricacao.dataPrevisaoFinalizacao
+    comentarios ordemDeFabricacao.comentarios
+}

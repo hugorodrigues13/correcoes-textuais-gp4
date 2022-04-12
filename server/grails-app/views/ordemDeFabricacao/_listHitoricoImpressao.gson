@@ -1,0 +1,12 @@
+import br.com.furukawa.dtos.LogOperacaoDTO
+
+model {
+    LogOperacaoDTO logOperacao
+}
+
+json {
+    id logOperacao.id
+    usuario logOperacao.usuario
+    data logOperacao.data
+    justificativa logOperacao.justificativa
+}

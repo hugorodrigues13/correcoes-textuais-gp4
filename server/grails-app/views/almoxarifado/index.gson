@@ -1,0 +1,17 @@
+import br.com.furukawa.model.OrdemDeFabricacao
+
+model {
+    List<OrdemDeFabricacao> entities
+    Integer total
+    Integer limiteSeparacaoEmHoras
+    List<String> gruposLinhas
+    List<String> linhasProducao
+}
+
+json{
+    entities g.render(template: "list", collection: entities, var: "ordemDeFabricacao")
+    total total
+    limiteSeparacaoEmHoras limiteSeparacaoEmHoras
+    gruposLinhas gruposLinhas
+    linhasProducao linhasProducao
+}

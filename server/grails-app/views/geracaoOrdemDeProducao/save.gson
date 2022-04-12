@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.GeracaoOrdemProducaoErrosDTO
+
+model {
+    List<GeracaoOrdemProducaoErrosDTO> errosGeracaoComOV
+}
+
+json {
+    errosGeracaoComOV g.render(template: "geracaoOrdemProducaoErros", collection: errosGeracaoComOV, var: "geracaoOrdemProducaoErrosDTO")
+}

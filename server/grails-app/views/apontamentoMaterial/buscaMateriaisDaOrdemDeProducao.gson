@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.ebs.ComponenteWIP
+
+model {
+    List<ComponenteWIP> materiais
+}
+
+json {
+    materiais g.render(template: 'material', collection: materiais, var: 'material')
+}

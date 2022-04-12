@@ -1,0 +1,8 @@
+
+model {
+    List etiqueta
+}
+
+json{
+    etiqueta etiqueta
+}

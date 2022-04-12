@@ -1,0 +1,11 @@
+import br.com.furukawa.model.TempoApontamentoProduto
+
+model {
+    List<TempoApontamentoProduto> entities
+    Integer total
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "tempoApontamento")
+    total total
+}

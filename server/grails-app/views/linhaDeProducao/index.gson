@@ -1,0 +1,11 @@
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    List<LinhaDeProducao> entities
+	Integer total
+}
+
+json{
+    entities g.render(template: "list", collection: entities, var: "linhaDeProducao")
+	total total
+}

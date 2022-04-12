@@ -1,0 +1,17 @@
+import br.com.furukawa.enums.TipoLogOperacao
+import br.com.furukawa.enums.TipoParametroLogOperacao
+import br.com.furukawa.model.LogOperacao
+
+model {
+    List<LogOperacao> entities
+    Integer total
+    List<TipoLogOperacao> tipos
+    List<TipoParametroLogOperacao> tiposParametro
+}
+
+json{
+    entities g.render(template: "list", collection: entities, var: "logOperacao")
+    total total
+    tipos tipos
+    tiposParametro tiposParametro
+}

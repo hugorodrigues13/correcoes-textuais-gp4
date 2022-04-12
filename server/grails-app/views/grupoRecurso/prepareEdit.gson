@@ -1,0 +1,23 @@
+import br.com.furukawa.dtos.TipoRegraExibicaoMP
+import br.com.furukawa.model.Defeito
+import br.com.furukawa.model.GrupoRecurso
+import br.com.furukawa.model.MotivoDeParada
+import br.com.furukawa.model.Recurso
+
+model {
+	GrupoRecurso entityInstance
+	List<Recurso> recursos
+    List<Defeito> defeitos
+	List<MotivoDeParada> listMotivosParadas
+	List<TipoRegraExibicaoMP> listTiposRegras
+}
+
+json {
+	entityInstance g.render(template: "form", model: [entityInstance: entityInstance])
+	recursos g.render(template: "recursoForm", collection: recursos, var: 'recurso')
+    defeitos g.render(template: "defeitoForm", collection: defeitos, var: 'defeito')
+	listMotivosParadas g.render(template: "motivoParada", collection: listMotivosParadas, var: 'motivoParada')
+	listTiposRegras listTiposRegras
+}
+
+

@@ -1,0 +1,20 @@
+import br.com.furukawa.dtos.HistoricoApontamentoDTO
+import br.com.furukawa.model.ApontamentoOrdemDeFabricacao
+
+model {
+    List<HistoricoApontamentoDTO> historico
+    Boolean podeDesfazerTodos
+    Boolean sucateado
+    String dataSucateamento
+    String codigoGerado
+    ApontamentoOrdemDeFabricacao apontamentoOF
+}
+
+json {
+    historico g.render(template: "historico", collection: historico, var: "historico")
+    apontamentoOF g.render(template: "apontamentoOF", model: [apontamentoOF: apontamentoOF])
+    podeDesfazerTodos podeDesfazerTodos
+    sucateado sucateado
+    dataSucateamento dataSucateamento
+    codigoGerado codigoGerado
+}

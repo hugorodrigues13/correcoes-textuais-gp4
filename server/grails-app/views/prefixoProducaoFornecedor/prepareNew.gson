@@ -1,0 +1,9 @@
+import br.com.furukawa.model.Fornecedor
+
+model {
+    List<Fornecedor> listFornecedores
+}
+
+json {
+    listFornecedores  g.render(template: "fornecedorList", collection:  listFornecedores, var: "fornecedor")
+}

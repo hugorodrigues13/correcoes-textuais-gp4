@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.ebs.LoteTransacao
+
+model {
+    List<LoteTransacao> lotes
+}
+
+json {
+    lotes g.render(template: 'lote', collection: lotes, var: 'lote')
+}

@@ -1,0 +1,13 @@
+import br.com.furukawa.dtos.RecursoDTO
+
+model {
+    RecursoDTO recurso
+}
+
+json {
+    id recurso.id
+    key recurso.id
+    value recurso.nome
+    nome recurso.nome
+    permiteApontamentoOF recurso.permiteApontamentoOF
+}

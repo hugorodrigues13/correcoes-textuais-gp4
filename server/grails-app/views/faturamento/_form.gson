@@ -1,0 +1,20 @@
+import br.com.furukawa.model.Lote
+
+model {
+    Lote lote
+}
+
+json {
+    id lote.id
+    codigoLote lote.codigoLote
+    codigoProduto lote.codigoProduto
+    descricaoProduto lote.descricaoProduto
+    semana lote.semana
+    ano lote.ano
+    grupoLinhaProducao lote.isGrupoLinhaDeProducao()
+    agrupamento lote.isAgrupamento()
+    quantidade lote.quantidade
+    quantidadeMaxima lote.quantidadeMaxima
+    numeroLote lote.numeroLote
+    statusLote lote.statusLote
+}

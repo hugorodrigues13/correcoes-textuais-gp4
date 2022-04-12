@@ -1,0 +1,12 @@
+import br.com.furukawa.enums.DiaDaSemana
+import br.com.furukawa.model.Turno
+
+model {
+    Turno entityInstance
+    List<DiaDaSemana> dias
+}
+
+json {
+    entityInstance g.render(template: 'form', model: [turno: entityInstance])
+    dias dias
+}

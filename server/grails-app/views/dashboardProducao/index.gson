@@ -1,0 +1,15 @@
+model {
+    List<String> gruposLinhas
+    List<String> linhasProducao
+    List<String> recursos
+    List<String> gruposRecursos
+    List<String> turnos
+}
+
+json{
+    gruposLinhas gruposLinhas
+    linhasProducao linhasProducao
+    recursos recursos
+    gruposRecursos gruposRecursos
+    turnos turnos
+}

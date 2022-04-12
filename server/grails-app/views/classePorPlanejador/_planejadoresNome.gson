@@ -1,0 +1,7 @@
+model {
+    String planejador
+}
+
+json {
+    value planejador
+}

@@ -1,0 +1,9 @@
+model {
+    List entities
+    Integer total
+}
+
+json {
+    entities g.render(template: "lote", collection: entities, var: "lote")
+    total total
+}

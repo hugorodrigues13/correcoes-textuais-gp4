@@ -1,0 +1,13 @@
+import br.com.furukawa.model.LogOperacao
+
+model {
+    LogOperacao logOperacao
+}
+
+json {
+    id logOperacao.id
+    usuario logOperacao.usuario
+    data logOperacao.data
+    tipoLogOperacao logOperacao.tipoLogOperacao
+    parametros g.render(template: "parametroLog", collection: logOperacao.parametros, var: "parametroLogOperacao")
+}

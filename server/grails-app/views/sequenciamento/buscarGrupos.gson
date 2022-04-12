@@ -1,0 +1,12 @@
+import br.com.furukawa.model.GrupoLinhaDeProducao
+import br.com.furukawa.model.User
+
+model {
+    List<GrupoLinhaDeProducao> listaGrupos
+    User usuarioLogado
+}
+
+json {
+   listaGrupos g.render(template: "grupoLinhaProducao", collection: listaGrupos, var: "grupoLinhaDeProducao")
+    usuarioLogado g.render(template: 'usuario', model:[usuario: usuarioLogado])
+}

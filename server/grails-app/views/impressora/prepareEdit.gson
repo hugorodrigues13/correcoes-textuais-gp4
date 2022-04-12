@@ -1,0 +1,14 @@
+import br.com.furukawa.enums.TipoImpressao
+import br.com.furukawa.model.Impressora
+
+model {
+    Impressora entityInstance
+    List<TipoImpressao> tipoImpressaoList
+    List<String> impressorasList
+}
+
+json {
+    entityInstance g.render(template: 'form', model:[impressora: entityInstance])
+    tipoImpressaoList g.render(template: 'tipoImpressaoList', collection: tipoImpressaoList, var: 'tipoImpressaoList')
+    impressorasList impressorasList
+}

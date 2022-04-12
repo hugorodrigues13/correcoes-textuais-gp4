@@ -1,0 +1,26 @@
+import br.com.furukawa.dtos.FaturamentoDTO
+
+model {
+    FaturamentoDTO lote
+}
+
+json {
+    id lote.id
+    codigoLote lote.codigoLote
+    codigoProduto lote.codigoProduto
+    descricaoProduto lote.descricaoProduto
+    semana lote.semana
+    ano lote.ano
+    grupoLinhaProducao lote.local
+    agrupamento lote.isAgrupamento()
+    quantidade lote.quantidade
+    quantidadeMaxima lote.quantidadeMaxima
+    numeroLote lote.numeroLote
+    statusLote lote.statusLote
+    quantidadePorCaixa lote.quantidadePorCaixa
+    dataFechamento lote.dataFechamento
+    ordemFabricacao lote.ordemDeFabricacao
+    impressoesPendentes lote.hasImpressoesPendentes()
+    foiAgrupado lote.foiAgrupado()
+}
+

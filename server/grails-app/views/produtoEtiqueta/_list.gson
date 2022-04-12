@@ -1,0 +1,15 @@
+import br.com.furukawa.model.ProdutoEtiqueta
+
+model {
+    ProdutoEtiqueta produtoEtiqueta
+}
+
+json {
+    id produtoEtiqueta.id
+    codigoProduto produtoEtiqueta.codigoProduto
+    quantidadeDeEtiquetas produtoEtiqueta.quantidadeDeEtiquetas
+    quantidadePorImpressao produtoEtiqueta.quantidadePorImpressao
+    etiquetas produtoEtiqueta.etiquetas.join(", ")
+    serial produtoEtiqueta.serial
+    grupo g.render(template: "grupoRecurso", collection: produtoEtiqueta.grupos, var:"listaGrupos")
+}

@@ -1,0 +1,19 @@
+import br.com.furukawa.dtos.ApontamentoResponseDTO
+
+model {
+    List messages
+    ApontamentoResponseDTO apontamentoResponseDTO
+}
+
+json {
+    messages messages
+    ordemFabricacao apontamentoResponseDTO.ordemFabricacao
+    lote apontamentoResponseDTO.lote
+    codigoProduto apontamentoResponseDTO.codigoProduto
+    caixa apontamentoResponseDTO.caixa
+    modelo apontamentoResponseDTO.modelo
+    comprimento apontamentoResponseDTO.comprimento
+    dataPrevisaoFinalizacao apontamentoResponseDTO.dataPrevisaoFinalizacao
+    camposRastreaveis apontamentoResponseDTO.camposRastreaveis
+    materiasPrimas g.render(template: "materiaPrima", collection: apontamentoResponseDTO.materiasPrimas, var: "mp")
+}

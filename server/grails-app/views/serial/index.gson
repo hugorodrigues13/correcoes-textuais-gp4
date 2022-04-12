@@ -1,0 +1,29 @@
+import br.com.furukawa.dtos.SerialFabricacaoDTO
+import br.com.furukawa.enums.StatusImpressaoEtiqueta
+import br.com.furukawa.enums.StatusLote
+import br.com.furukawa.enums.StatusOrdemDeProducaoWIP
+import br.com.furukawa.enums.StatusSerialFabricacao
+import br.com.furukawa.enums.StatusOrdemFabricacao
+import br.com.furukawa.enums.StatusRomaneio
+
+model {
+    List<SerialFabricacaoDTO> entities
+    List<StatusSerialFabricacao> statusList
+    List<StatusOrdemFabricacao> statusOrdemFabricacaoList
+    Long total
+    List<StatusRomaneio> statusRomaneioList
+    List<StatusOrdemDeProducaoWIP> statusWipList
+    List<StatusImpressaoEtiqueta> statusImpressaoEtiqueta
+    List<StatusLote> statusLoteList
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "serialFabricacaoDTO")
+    statusList statusList*.name()
+    total total
+    statusOrdemFabricacaoList statusOrdemFabricacaoList
+    statusRomaneioList statusRomaneioList
+    statusWipList statusWipList
+    statusImpressaoEtiqueta statusImpressaoEtiqueta
+    statusLoteList statusLoteList
+}

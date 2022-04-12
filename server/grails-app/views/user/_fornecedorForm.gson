@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Fornecedor
+
+model {
+	Fornecedor fornecedor
+}
+
+json {
+	id fornecedor.id
+	nome fornecedor.nome
+	organizationId fornecedor.organizationId
+	vendorId fornecedor.vendorId
+}

@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.impressao.RetornoImpressao
+
+model {
+    RetornoImpressao etiqueta
+}
+
+json {
+    base64Etiqueta etiqueta.base64Etiqueta
+    success etiqueta.success
+    message etiqueta.message
+}

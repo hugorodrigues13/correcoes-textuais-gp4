@@ -1,0 +1,10 @@
+import br.com.furukawa.dtos.ebs.LoteTransacao
+
+model {
+    LoteTransacao lote
+}
+
+json {
+    numeroLote lote.numeroLote
+    quantidadeDisponivel lote.quantidadeDisponivel
+}

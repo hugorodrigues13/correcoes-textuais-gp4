@@ -1,0 +1,9 @@
+model {
+    Integer lotesAbertos
+    Integer lotesFechados
+}
+
+json{
+    lotesAbertos lotesAbertos
+    lotesFechados lotesFechados
+}

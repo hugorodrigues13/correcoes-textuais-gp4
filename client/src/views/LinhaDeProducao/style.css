@@ -1,0 +1,52 @@
+.iconCloseCircleOutlined{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.iconCloseCircleOutlined svg {
+  cursor: pointer;
+  color: transparent;
+  font-size: 2.5em;
+  margin-right: 0.3em;
+  transition: width 2s;
+}
+
+.iconCloseCircleOutlined svg:hover {
+  visibility: visible;
+  color: #000000;
+  z-index: 10000;
+}
+
+.iconDeleteOutlined{
+  position: absolute!important;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.label-versao {
+  padding: 0 0 8px;
+}
+
+.col-versao-form {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.linhaProducao-messagem-erro {
+  margin-bottom: 20px;
+}
+
+.linkar-defeito-grupo{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.linkar-defeito-grupo.grupo{
+  top: 5px;
+  left: 5px;
+}

@@ -1,0 +1,21 @@
+import br.com.furukawa.model.RecebimentoNF
+
+model {
+    RecebimentoNF recebimentoNF
+}
+
+json {
+    id recebimentoNF.id
+    interfaceTransactionId recebimentoNF.interfaceTransactionId
+    ordemDeProducao recebimentoNF.ordemDeProducao
+    notaFiscal recebimentoNF.notaFiscal
+    quantidade recebimentoNF.quantidade
+    sequenciaOperacao recebimentoNF.sequenciaOperacao
+    status recebimentoNF.status
+    erroExportacao recebimentoNF.erroExportacao
+    dataCriacao recebimentoNF.getDataCriacaoFormatada()
+    dataUltimaAtualizacao recebimentoNF.getDataAtualizacaoFormatada()
+    lotes recebimentoNF.getQuantidadeLotes()
+    versao recebimentoNF.version
+    isConcluirManualmente recebimentoNF.isConcluirManualmente
+}

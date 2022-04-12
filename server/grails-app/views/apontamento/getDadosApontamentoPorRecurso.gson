@@ -1,0 +1,16 @@
+import br.com.furukawa.model.Defeito
+import br.com.furukawa.model.Impressora
+
+model {
+    List<Defeito> defeitos
+    List<Impressora> impressoras
+    Integer tempoMaximoSemApontamento
+    Long ultimoApontamento
+}
+
+json{
+    defeitos g.render(template: "defeitoList", collection: defeitos, var: "defeito")
+    impressoras g.render(template: "impressoraList", collection: impressoras, var: "impressora")
+    tempoMaximoSemApontamento tempoMaximoSemApontamento
+    ultimoApontamento ultimoApontamento
+}

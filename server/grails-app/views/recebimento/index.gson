@@ -1,0 +1,11 @@
+import br.com.furukawa.model.RecebimentoNF
+
+model {
+    List<RecebimentoNF> entities
+    int total
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "recebimentoNF")
+    total total
+}

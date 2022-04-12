@@ -1,0 +1,9 @@
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    List<LinhaDeProducao> linhasProducao
+}
+
+json{
+    linhasProducao g.render(template: "list", collection: linhasProducao, var: "linhaDeProducao")
+}

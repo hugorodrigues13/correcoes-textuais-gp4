@@ -1,0 +1,9 @@
+import br.com.furukawa.model.GrupoLinhaDeProducao
+
+model {
+    List<GrupoLinhaDeProducao> entities
+}
+
+json {
+    entities g.render(template: "grupoLinhaDeProducao", collection: entities, var: "grupoLinhaDeProducao")
+}

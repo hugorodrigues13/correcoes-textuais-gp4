@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Teste
+
+model {
+    Teste teste
+}
+
+json {
+    id teste.id
+    tipo teste.tipo
+    amostragem teste.amostragem
+    considerarPerdas teste.considerarPerdas
+}

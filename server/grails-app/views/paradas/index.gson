@@ -1,0 +1,13 @@
+import br.com.furukawa.dtos.ParadaComMotivoDTO
+
+model {
+	List<ParadaComMotivoDTO> entities
+	int total
+	List<Recurso> listRecursos
+}
+
+json {
+	entities g.render(template: "list", collection: entities, var: "entity")
+	total total
+	listRecursos g.render(template: "recurso", collection: listRecursos, var: 'recurso')
+}

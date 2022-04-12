@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.impressao.RetornoImpressao
+
+model {
+    List<RetornoImpressao> retornoImpressaoList
+}
+
+json {
+    etiquetas g.render(template: 'retornoImpressaoDTO', collection: retornoImpressaoList, var: 'etiqueta')
+}

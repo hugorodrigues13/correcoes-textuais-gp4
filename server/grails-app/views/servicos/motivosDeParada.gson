@@ -1,0 +1,9 @@
+import br.com.furukawa.model.MotivoDeParada
+
+model {
+    List<MotivoDeParada> motivosParada
+}
+
+json {
+    motivosParada g.render(template: 'listMotivoParada', collection: motivosParada, var: 'motivo')
+}

@@ -1,0 +1,11 @@
+import br.com.furukawa.dtos.ClassePorPlanejadorDTO
+
+model {
+    ClassePorPlanejadorDTO classePorPlanejador
+}
+
+json {
+    id classePorPlanejador.id
+    classeContabil classePorPlanejador.classeContabil
+    planejadores g.render(template: "planejadoresNome", collection: classePorPlanejador.planejadores, var: "planejador")
+}

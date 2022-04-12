@@ -1,0 +1,14 @@
+import br.com.furukawa.model.OrdemDeProducao
+
+model {
+    OrdemDeProducao entity
+}
+
+json {
+    id entity.id
+    quantidade entity.quantidade
+    totalPecasSequenciadas entity.totalPecasSequenciadas
+    statusOracle entity.wipStatusType
+    dataPrometida entity.dataPrevisaoFinalizacaoFormatada
+    codigoOrdem entity.codigoOrdem
+}

@@ -1,0 +1,29 @@
+.romaneio-quadro-infos {
+  min-height: 50px;
+  width: 500px;
+  font-size: 12px;
+  border-radius: 2px;
+  border: 1px solid #C9C9C9;
+  padding: 6px 10px 10px 10px;
+  position: relative;
+}
+
+.romaneio-cabecalho-row{
+  font-size: 18px;
+}
+.romaneio-cabecalho-row span {
+  font-weight: bold;
+}
+.romaneio-ghost-button{
+  padding: 0;
+  margin-left: 5px;
+  border: 0 !important;
+  font-size: 18px;
+}
+.romaneio-servico-header{
+  font-weight: bold;
+}
+.romaneio-sumario {
+  background-color: #FAFAFA;
+  font-weight: bold;
+}

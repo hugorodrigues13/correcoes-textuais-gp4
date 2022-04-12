@@ -1,0 +1,16 @@
+import br.com.furukawa.model.Acesso
+import br.com.furukawa.model.Role
+import br.com.furukawa.model.User
+
+model {
+	List<User> entities
+	List<Role> perfis
+	List<Acesso> acessos
+	int total
+}
+
+json {
+	entities g.render(template: "list", collection: entities, var: "user", model: [perfis: perfis, acessos: acessos])
+	total total
+}
+

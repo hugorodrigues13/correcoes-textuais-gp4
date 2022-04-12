@@ -1,0 +1,11 @@
+import br.com.furukawa.model.GrupoRecurso
+
+model {
+    List<GrupoRecurso> entities
+	Integer total
+}
+
+json{
+    entities g.render(template: "list", collection: entities, var: "grupoRecurso")
+	total total
+}

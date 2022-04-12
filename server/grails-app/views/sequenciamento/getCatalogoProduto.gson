@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.ItemCatalogoDTO
+
+model {
+    List <ItemCatalogoDTO> itens
+}
+
+json {
+    itens g.render(template: "itens", collection: itens, var: "itens")
+}

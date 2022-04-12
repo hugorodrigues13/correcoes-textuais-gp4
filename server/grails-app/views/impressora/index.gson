@@ -1,0 +1,14 @@
+import br.com.furukawa.enums.TipoImpressao
+import br.com.furukawa.model.Impressora
+
+model {
+    List<Impressora> entities
+    List<TipoImpressao> tiposImpressao
+    int total
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "impressora")
+    tiposImpressao tiposImpressao*.name()
+    total total
+}

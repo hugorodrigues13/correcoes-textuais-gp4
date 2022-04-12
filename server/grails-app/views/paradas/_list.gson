@@ -1,0 +1,15 @@
+import br.com.furukawa.dtos.ParadaComMotivoDTO
+
+model {
+	ParadaComMotivoDTO entity
+}
+
+json {
+    id entity.paradaID
+    key entity.paradaID
+    value entity.motivo
+    motivo entity.motivoID
+    dataInicioParada entity.inicio
+    dataFimParada entity.fim
+    recurso entity.recurso
+}

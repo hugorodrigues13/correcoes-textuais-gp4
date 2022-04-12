@@ -1,0 +1,23 @@
+import br.com.furukawa.dtos.OrdemDeProducaoDTO
+import br.com.furukawa.enums.StatusOrdemDeProducaoWIP
+import br.com.furukawa.enums.StatusOrdemProducao
+
+model {
+    List<OrdemDeProducaoDTO> entities
+    Integer total
+    List<StatusOrdemProducao> tiposStatus
+    List<String> planejadores
+    String defaultPlanejador
+    List<StatusOrdemDeProducaoWIP> tiposStatusOracle
+    List<StatusOrdemDeProducaoWIP> tiposStatusOraclePadrao
+}
+
+json{
+    entities g.render(template: "list", collection: entities, var: "ordemDeProducao")
+    total total
+    tiposStatus tiposStatus
+    planejadores planejadores
+    defaultPlanejador defaultPlanejador
+    tiposStatusOracle tiposStatusOracle
+    tiposStatusOraclePadrao tiposStatusOraclePadrao
+}

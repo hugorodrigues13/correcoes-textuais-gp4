@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.ProdutoEBSDTO
+
+model {
+    List<ProdutoEBSDTO> produtos
+}
+
+json{
+    listProdutos g.render(template: "produto", collection: produtos, var: "produto")
+}

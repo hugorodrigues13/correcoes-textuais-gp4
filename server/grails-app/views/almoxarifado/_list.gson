@@ -1,0 +1,24 @@
+import br.com.furukawa.model.OrdemDeFabricacao
+
+model {
+    OrdemDeFabricacao ordemDeFabricacao
+}
+
+json {
+    id ordemDeFabricacao.id
+    codigo ordemDeFabricacao.getCodigoOrdemDeFabricacao()
+    codigoProduto ordemDeFabricacao.codigoProduto
+    quantidadeTotal ordemDeFabricacao.quantidadeTotal
+    quantidadeFinalizada ordemDeFabricacao.quantidadeFinalizada
+    status ordemDeFabricacao.status
+    lista ordemDeFabricacao.ordemDeProducao.lista
+    roteiro ordemDeFabricacao.ordemDeProducao.roteiro
+    linha ordemDeFabricacao.linhaDeProducao?.nome
+    descricaoProduto ordemDeFabricacao.getDescricaoDoProduto()
+    grupoLinha ordemDeFabricacao.getGrupoLinhaProducao()?.getNome()
+    dataPrevisaoSeparacao ordemDeFabricacao.getDataPrevisaoFormatada()
+    ordemProducao ordemDeFabricacao.ordemDeProducao.codigoOrdem
+    dataPrevisaoFinalizacao ordemDeFabricacao.ordemDeProducao.dataPrevisaoFinalizacaoFormatada
+    materiasPrimas g.render(template: "materiaPrima", collection: ordemDeFabricacao.getMateriasPrimasSeparacao(), var: "materiaPrimaSeparacao")
+    primeiroDoSequenciamento ordemDeFabricacao.isPrimeiroDoSequenciamento()
+}

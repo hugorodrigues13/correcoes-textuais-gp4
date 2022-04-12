@@ -1,0 +1,9 @@
+import br.com.furukawa.enums.TipoImpressao
+
+model {
+    TipoImpressao tipoImpressao
+}
+
+json {
+    tipoImpressao tipoImpressao.name()
+}

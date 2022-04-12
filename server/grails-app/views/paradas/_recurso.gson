@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Recurso
+
+model {
+    Recurso recurso
+}
+
+json {
+    id recurso.id
+    nome recurso.nome
+    value recurso.nome
+    key recurso.id
+}

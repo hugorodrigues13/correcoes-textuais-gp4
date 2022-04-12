@@ -1,0 +1,20 @@
+import br.com.furukawa.model.User
+
+model {
+	User entityInstance
+}
+
+json {
+	id entityInstance.id
+	fullname entityInstance.fullname
+	email entityInstance.email
+	username entityInstance.username
+	enabled entityInstance.enabled
+	isRemovivel entityInstance.isRemovivel
+	perfil entityInstance.getRole()*.id
+	matricula entityInstance.matricula
+	planejadores entityInstance.planejadores
+	acessos entityInstance.acessos*.id
+	token entityInstance.token
+	linguagem entityInstance.linguagem
+}

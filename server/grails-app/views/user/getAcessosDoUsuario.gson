@@ -1,0 +1,17 @@
+import br.com.furukawa.model.Fornecedor
+import br.com.furukawa.model.Organizacao
+
+model {
+	List<Organizacao> organizacoes
+	List<Fornecedor> fornecedores
+	String organizacao
+	String fornecedor
+}
+
+json {
+    organizacaoId organizacao
+    fornecedorId fornecedor
+	fornecedores g.render(template: 'fornecedorForm', collection: fornecedores, var: 'fornecedor')
+	organizacoes g.render(template: 'organizacaoForm', collection: organizacoes, var: 'organizacao')
+}
+

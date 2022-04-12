@@ -1,0 +1,10 @@
+import br.com.furukawa.dtos.ebs.ComponenteWIP
+
+model {
+    ComponenteWIP mp
+}
+
+json {
+    codigo mp.codigoProduto
+    descricao mp.descricaoProduto
+}

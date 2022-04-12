@@ -1,0 +1,11 @@
+import br.com.furukawa.model.Conector
+
+model {
+    List<Conector> entities
+    Integer total
+}
+
+json{
+    entities g.render(template: "list", collection: entities, var: "conector")
+    total total
+}

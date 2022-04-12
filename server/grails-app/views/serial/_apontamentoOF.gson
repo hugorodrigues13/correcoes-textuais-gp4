@@ -1,0 +1,11 @@
+import br.com.furukawa.model.ApontamentoOrdemDeFabricacao
+
+model {
+    ApontamentoOrdemDeFabricacao apontamentoOF
+}
+
+json {
+    id apontamentoOF?.id
+    data apontamentoOF?.dataCriacaoFormatada
+    recurso apontamentoOF?.recurso?.nome
+}

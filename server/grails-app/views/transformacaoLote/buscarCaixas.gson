@@ -1,0 +1,9 @@
+import br.com.furukawa.model.ImpressaoApontamentoCaixa
+
+model {
+    List<ImpressaoApontamentoCaixa> caixas
+}
+
+json {
+    caixas g.render(template: 'caixa', collection: caixas, var: 'caixa')
+}

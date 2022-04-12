@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.RecursoDTO
+
+model {
+    List<RecursoDTO> recursos
+}
+
+json{
+    recursos g.render(template: "recursoList", collection: recursos.sort{it.nome.toUpperCase()}, var: "recurso")
+}

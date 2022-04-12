@@ -1,0 +1,14 @@
+import br.com.furukawa.model.Fornecedor
+
+model {
+    Fornecedor entityInstance
+    Boolean desabilitarPrefixo
+}
+
+json {
+    id entityInstance.id
+    nome entityInstance.nome
+    prefixoProducao entityInstance.prefixoProducao
+    endereco entityInstance.endereco
+    desabilitarPrefixo desabilitarPrefixo
+}

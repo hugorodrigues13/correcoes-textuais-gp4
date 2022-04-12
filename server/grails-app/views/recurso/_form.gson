@@ -1,0 +1,14 @@
+import br.com.furukawa.model.Recurso
+
+model {
+    Recurso recurso
+}
+
+json {
+    id recurso.id
+    nome recurso.nome
+    metaOEE recurso.metaOEE
+    codigoOracle recurso.codigoOracle
+    conectores recurso.conectores*.id
+    testes g.render(template: "teste", collection:  recurso.testes, var: "teste")
+}

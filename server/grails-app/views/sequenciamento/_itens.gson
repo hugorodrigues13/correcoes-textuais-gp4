@@ -1,0 +1,10 @@
+import br.com.furukawa.dtos.ItemCatalogoDTO
+
+model {
+    ItemCatalogoDTO item
+}
+
+json {
+    nome item.nome
+    valor item.valor
+}

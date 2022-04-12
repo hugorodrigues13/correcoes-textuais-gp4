@@ -1,0 +1,21 @@
+import br.com.furukawa.model.Romaneio
+
+model {
+    Romaneio romaneio
+}
+
+json {
+    id romaneio.id
+    romaneio romaneio.getCodigoRomaneio()
+    volume romaneio.getVolumeEditadoOuTotalDosServicos()
+    notaFiscalEncomenda g.render(template: "notaFiscal", model:[notaFiscal: romaneio.notaFiscalEncomenda])
+    notaFiscalRetorno g.render(template: "notaFiscal", model:[notaFiscal: romaneio.notaFiscalRetorno])
+    emissao romaneio.getDataEmissaoFormatada()
+    status romaneio.status
+    mensagemIntegracao romaneio.mensagemIntegracao
+    quantidadeTotal romaneio.getQuantidadeTotal()
+    valorTotal romaneio.getValorTotal()
+    servicos g.render(template: "servicos", collection: romaneio.getServicosOrdenados(), var: "_servicos")
+    lotes g.render(template: "lote", collection: romaneio.lotes, var: "lote")
+    lotesString romaneio.getLotesString()
+}

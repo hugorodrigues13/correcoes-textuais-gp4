@@ -1,0 +1,12 @@
+import br.com.furukawa.model.LinhaDeProducao
+import br.com.furukawa.model.Meta
+
+model {
+    Meta entityInstance
+    List<LinhaDeProducao> linhasDeProducao
+}
+
+json {
+    entityInstance g.render(template: 'form', model: [entityInstance: entityInstance])
+    linhasDeProducao g.render(template: "linhaDeProducao", collection: linhasDeProducao, var: "linhaDeProducao")
+}

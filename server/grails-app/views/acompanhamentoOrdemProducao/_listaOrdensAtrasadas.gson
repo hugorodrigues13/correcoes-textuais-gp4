@@ -1,0 +1,18 @@
+import br.com.furukawa.dtos.OrdemDeProducaoDTO
+
+model {
+    OrdemDeProducaoDTO ordemDeProducao
+}
+
+json{
+    id ordemDeProducao.id
+    ordemDeProducao ordemDeProducao.codigoOrdem
+    status ordemDeProducao.status
+    descricaoProduto ordemDeProducao.descricaoProduto
+    lista ordemDeProducao.lista ?: '00'
+    roteiro ordemDeProducao.roteiro ?: '00'
+    codigoProduto ordemDeProducao.codigoProduto
+    dataPrevisaoFinalizacao ordemDeProducao.dataPrevisaoFinalizacao
+    pedido ordemDeProducao.pedido
+    quantidade ordemDeProducao.quantidade
+}

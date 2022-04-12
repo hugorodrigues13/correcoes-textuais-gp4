@@ -1,0 +1,9 @@
+import br.com.furukawa.model.Recurso
+
+model {
+    List<Recurso> recursos
+}
+
+json {
+    recursos g.render(template: "listRecursos", collection: recursos, var: "recurso")
+}

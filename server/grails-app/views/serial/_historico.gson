@@ -1,0 +1,12 @@
+import br.com.furukawa.dtos.HistoricoApontamentoDTO
+
+model {
+    HistoricoApontamentoDTO historico
+}
+
+json {
+    id historico.id
+    data historico.data
+    defeito historico.defeito
+    recurso historico.recurso
+}

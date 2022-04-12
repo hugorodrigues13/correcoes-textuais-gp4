@@ -1,0 +1,12 @@
+import br.com.furukawa.model.Impressora
+
+model {
+    Impressora impressora
+}
+
+json {
+    nome impressora.nome
+    apelido impressora.apelido
+    ips impressora.ips
+    tipoImpressao impressora.tipoImpressao
+}

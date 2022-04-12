@@ -1,0 +1,14 @@
+import br.com.furukawa.dtos.OrdemDeVendaEBSDTO
+
+model {
+    OrdemDeVendaEBSDTO ordemDeVenda
+}
+
+json {
+    numero ordemDeVenda.numeroOV
+    codigoProduto ordemDeVenda.codigoProduto
+    descricaoProduto ordemDeVenda.descricao
+    quantidade ordemDeVenda.quantidadePedida
+    fornecedoresListasRoteiros g.render(template: "fornecedorListaRoteiro", collection: ordemDeVenda.fornecedoresListasRoteiros, var: "fornecedorListaRoteiro")
+    fornecedoresListasRoteirosFiltrado g.render(template: "fornecedorListaRoteiro", collection: ordemDeVenda.fornecedoresListasRoteiros, var: "fornecedorListaRoteiro")
+}

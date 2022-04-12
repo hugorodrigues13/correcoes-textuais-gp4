@@ -1,0 +1,11 @@
+import br.com.furukawa.model.Fornecedor
+
+model {
+    List<Fornecedor> entities
+    int total
+}
+
+json {
+    entities g.render(template: "fornecedorList", collection: entities, var: "fornecedor")
+    total total
+}

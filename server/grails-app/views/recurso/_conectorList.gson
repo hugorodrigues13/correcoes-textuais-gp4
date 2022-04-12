@@ -1,0 +1,11 @@
+import br.com.furukawa.model.Conector
+
+model {
+    Conector conector
+}
+
+json {
+    key conector.id
+    value conector.descricao
+    label conector.descricao
+}

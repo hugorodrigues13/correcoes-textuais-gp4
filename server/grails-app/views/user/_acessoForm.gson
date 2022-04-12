@@ -1,0 +1,10 @@
+import br.com.furukawa.model.Acesso
+
+model {
+	Acesso acesso
+}
+
+json {
+	key acesso.id
+	value acesso.nome
+}

@@ -1,0 +1,12 @@
+import br.com.furukawa.dtos.impressao.RetornoImpressao
+import br.com.furukawa.model.Impressora
+
+model {
+    List<RetornoImpressao> etiquetas
+    Impressora impressora
+}
+
+json {
+    etiquetas g.render(template: 'retornoImpressaoDTO', collection: etiquetas, var: 'etiqueta')
+    impressora g.render(template: "impressora", model: [impressora: impressora])
+}

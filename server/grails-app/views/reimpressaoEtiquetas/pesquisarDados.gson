@@ -1,0 +1,9 @@
+import br.com.furukawa.model.Lote
+
+model {
+    List<String> lotes
+}
+
+json {
+    lotes lotes
+}

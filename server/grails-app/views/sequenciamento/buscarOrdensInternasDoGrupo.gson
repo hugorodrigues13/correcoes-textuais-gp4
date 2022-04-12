@@ -1,0 +1,12 @@
+import br.com.furukawa.dtos.OrdemFabricacaoSequenciamentoDTO
+import br.com.furukawa.enums.StatusOrdemFabricacao
+
+model {
+    List<OrdemFabricacaoSequenciamentoDTO> ordensDoGrupo
+    List<StatusOrdemFabricacao> listStatusOrdemFabricacao
+}
+
+json {
+    ordensDoGrupo g.render(template: "ordemDeFabricacao", collection: ordensDoGrupo, var: "ordemDeFabricacao")
+    listStatusOrdemFabricacao listStatusOrdemFabricacao
+}

@@ -1,0 +1,19 @@
+import br.com.furukawa.model.PlanejamentoDiario
+
+model {
+    PlanejamentoDiario planejamentoDiario
+}
+
+json {
+    id planejamentoDiario.id
+    data planejamentoDiario.dataFormatada
+    linhaDeProducao planejamentoDiario.linhaDeProducao?.id
+    grupoLinhaDeProducao planejamentoDiario.grupoLinhaDeProducao?.id
+    turno planejamentoDiario.turno?.id
+    quantidadePlanejadaPecas planejamentoDiario.quantidadePlanejadaPecas
+    quantidadePlanejadaPessoas planejamentoDiario.quantidadePlanejadaPessoas
+    quantidadePessoasPresentes planejamentoDiario.quantidadePessoasPresentes
+    pessoasTreinamento planejamentoDiario.pessoasTreinamento
+    pessoasHabilitadas planejamentoDiario.pessoasHabilitadas
+    observacao planejamentoDiario.observacao
+}

@@ -1,0 +1,17 @@
+import br.com.furukawa.dtos.ApontamentoPendenteDTO
+
+model {
+//    HistoricoApontamento apontamento
+    ApontamentoPendenteDTO apontamento
+}
+
+json {
+    id apontamento.historicoApontamentoId
+    serial apontamento.serial
+    linhaDeProducao apontamento.linhaDeProducao
+    recurso apontamento.recurso
+    grupoRecurso apontamento.grupoRecurso
+    operador apontamento.operador
+    data apontamento.data
+    erroTransacao apontamento.erroTransacao
+}

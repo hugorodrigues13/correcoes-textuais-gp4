@@ -1,0 +1,21 @@
+import org.springframework.validation.*
+
+model {
+    Errors errors
+}
+
+response.status UNPROCESSABLE_ENTITY
+
+json {
+    Errors errorsObject = (Errors) this.errors
+
+    def allErrors = errorsObject.allErrors
+
+    errors(allErrors) { FieldError e ->
+        String className = e.getObjectName().split("\\.").last()
+
+        message className[0].toLowerCase() + className.substring(1) + "." + e.getField() + "." + e.getCode()
+        field e.getField()
+        arguments e.getArguments()?.length > 3 ? e.getArguments()[3].toString() : ""
+    }
+}

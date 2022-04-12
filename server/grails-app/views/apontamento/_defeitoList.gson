@@ -1,0 +1,11 @@
+import br.com.furukawa.model.Defeito
+
+model {
+    Defeito defeito
+}
+
+json {
+    nome defeito.nome
+    value defeito.nome
+    key defeito.id
+}

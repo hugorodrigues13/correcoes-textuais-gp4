@@ -1,0 +1,13 @@
+import br.com.furukawa.enums.TipoParametroLogOperacao
+import br.com.furukawa.model.LogOperacao
+
+model {
+    LogOperacao logOperacao
+}
+
+json {
+    id logOperacao.id
+    usuario logOperacao.usuario
+    data logOperacao.dataFormatada
+    justificativa logOperacao.parametros.find({it.tipo == TipoParametroLogOperacao.JUSTIFICATIVA}).valor
+}

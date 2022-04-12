@@ -1,0 +1,14 @@
+import br.com.furukawa.model.GrupoLinhaDeProducao
+
+model {
+    GrupoLinhaDeProducao grupoLinhaDeProducao
+}
+
+json {
+    id grupoLinhaDeProducao.id
+    nome grupoLinhaDeProducao.nome
+    linhas grupoLinhaDeProducao.linhasRetornadas()
+    isAtivo grupoLinhaDeProducao.isAtivo
+    status grupoLinhaDeProducao.getStatus()
+    produtos g.render(template: "grupoLinhaProdutoForm", collection: grupoLinhaDeProducao.produtos.sort{ [it.codigo, it.roteiro]}, var: "produto")
+}

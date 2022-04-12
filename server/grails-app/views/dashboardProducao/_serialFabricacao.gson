@@ -1,0 +1,11 @@
+import br.com.furukawa.model.SerialFabricacao
+
+model {
+    SerialFabricacao serialFabricacao
+}
+
+json {
+    id serialFabricacao.id
+    serial serialFabricacao.getCodigoCompleto()
+    status serialFabricacao.statusSerial.name()
+}

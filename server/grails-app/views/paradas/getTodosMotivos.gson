@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.MotivoDeParadaDTO
+
+model {
+    List<MotivoDeParadaDTO> motivos
+}
+
+json {
+    motivos g.render(template: 'motivo', collection: motivos, var: 'motivo')
+}

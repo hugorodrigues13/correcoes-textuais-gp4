@@ -1,0 +1,11 @@
+import br.com.furukawa.model.Lote
+
+model {
+    Lote lote
+}
+
+json {
+    id lote?.id
+    value lote?.getCodigoLote()
+    key lote?.getCodigoLote()
+}

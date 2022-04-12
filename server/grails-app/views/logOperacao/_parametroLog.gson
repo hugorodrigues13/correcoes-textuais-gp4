@@ -1,0 +1,11 @@
+import br.com.furukawa.model.ParametroLogOperacao
+
+model {
+    ParametroLogOperacao parametroLogOperacao
+}
+
+json {
+    id parametroLogOperacao.id
+    valor parametroLogOperacao.valor
+    tipo parametroLogOperacao.tipo
+}

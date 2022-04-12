@@ -1,0 +1,12 @@
+import br.com.furukawa.model.GrupoRecurso
+import br.com.furukawa.model.ProdutoEtiqueta
+
+model {
+    ProdutoEtiqueta entityInstance
+    List<GrupoRecurso> listGrupoRecurso
+}
+
+json {
+    entityInstance g.render(template: 'form', model:[entityInstance: entityInstance])
+    listGrupoRecurso g.render(template: 'grupoRecurso', collection: listGrupoRecurso, var: 'grupoRecurso')
+}

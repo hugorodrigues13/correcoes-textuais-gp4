@@ -1,0 +1,16 @@
+import br.com.furukawa.model.Acesso
+import br.com.furukawa.model.Organizacao
+import br.com.furukawa.model.Fornecedor
+
+model {
+    Acesso acesso
+    List<Organizacao> organizacoes
+    List<Fornecedor> fornecedores
+}
+
+json {
+    id acesso.id
+    nome acesso.nome
+	fornecedores g.render(template: 'fornecedorForm', collection: acesso.fornecedores.unique({it.nome}).sort{it.nome}, var: 'fornecedor')
+	organizacoes g.render(template: 'organizacaoForm', collection: acesso.organizacoes.sort{it.descricao}, var: 'organizacao')
+}

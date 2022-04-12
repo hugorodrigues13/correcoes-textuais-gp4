@@ -1,0 +1,15 @@
+import br.com.furukawa.model.Conector
+import br.com.furukawa.model.Defeito
+import br.com.furukawa.model.Teste
+
+model {
+    List<Conector> conectores
+    List<Defeito> defeitos
+    List<Teste> testes
+}
+
+json {
+    conectores g.render(template: "listConectores", collection: conectores, var: "conector")
+    defeitos g.render(template: "listDefeitos", collection: defeitos, var: "defeito")
+    testes g.render(template: "listTestes", collection: testes, var: 'teste')
+}

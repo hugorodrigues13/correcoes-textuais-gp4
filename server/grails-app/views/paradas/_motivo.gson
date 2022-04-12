@@ -1,0 +1,10 @@
+import br.com.furukawa.dtos.MotivoDeParadaDTO
+
+model {
+    MotivoDeParadaDTO motivo
+}
+
+json {
+    id motivo.id
+    motivo motivo.motivo
+}

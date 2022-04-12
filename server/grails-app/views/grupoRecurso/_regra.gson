@@ -1,0 +1,11 @@
+import br.com.furukawa.model.RegraExibicaoMP
+
+model {
+    RegraExibicaoMP regra
+}
+
+json {
+    id regra.id
+    tipo regra.tipo
+    descricao regra.descricao
+}

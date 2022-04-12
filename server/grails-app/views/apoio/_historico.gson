@@ -1,0 +1,11 @@
+import br.com.furukawa.model.HistoricoApontamento
+
+model {
+    HistoricoApontamento historico
+}
+
+json {
+    data historico.getDataFormatada()
+    defeito historico.defeito?.nome
+    recurso historico.recurso.nome
+}

@@ -1,0 +1,9 @@
+import br.com.furukawa.dtos.RomaneioEBSDTO
+
+model {
+    List<RomaneioEBSDTO> entities
+}
+
+json {
+    entities g.render(template: "romaneioDto", collection: entities, var: "romaneio")
+}

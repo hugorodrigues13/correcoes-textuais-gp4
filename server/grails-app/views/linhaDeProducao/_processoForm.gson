@@ -1,0 +1,15 @@
+import br.com.furukawa.model.ProcessoLinhaDeProducao
+
+model {
+	ProcessoLinhaDeProducao processo
+}
+
+json {
+    idProcesso processo.id
+	key processo.grupoRecursoId
+	value processo.grupoRecurso.nome
+	ordem processo.ordem
+	apontamentos processo.numeroMaximoDeApontamentos
+	defeitos g.render(template: "defeitos", collection: processo.grupoRecurso.defeitos, var: 'defeito')
+	reprocessos g.render(template: "reprocesso", collection: processo.reprocessos, var: 'reprocesso')
+}

@@ -1,0 +1,10 @@
+import br.com.furukawa.model.GrupoLinhaDeProducao
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    List<LinhaDeProducao> linhas
+}
+
+json {
+    linhas g.render(template: "linhaDeProducao", collection: linhas, var: "linhaDeProducao")
+}

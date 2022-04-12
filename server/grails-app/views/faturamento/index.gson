@@ -1,0 +1,13 @@
+import br.com.furukawa.dtos.FaturamentoDTO
+
+model {
+    List<FaturamentoDTO> entities
+    int total
+    boolean desativarRomaneio
+}
+
+json {
+    lotes g.render(template: "list", collection: entities, var: "lote")
+    total total
+    desativarRomaneio desativarRomaneio
+}

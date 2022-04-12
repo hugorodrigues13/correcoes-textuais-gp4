@@ -1,0 +1,17 @@
+import br.com.furukawa.model.Acesso
+import br.com.furukawa.model.Fornecedor
+import br.com.furukawa.model.Organizacao
+
+model {
+    List<Acesso> entities
+    List<Organizacao> listOrganizacao
+    List<Fornecedor> listFornecedor
+    Integer total
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "acesso")
+    listOrganizacao listOrganizacao.collect{ return [descricao: it.descricao, id: it.organizationID] }
+    listFornecedor listFornecedor.collect{ return [id: it.id, nome: it.nome, organizationID: it.organizationId] }
+    total total
+}

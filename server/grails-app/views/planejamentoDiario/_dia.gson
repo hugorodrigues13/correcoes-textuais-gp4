@@ -1,0 +1,12 @@
+import br.com.furukawa.enums.DiaDaSemana
+import br.com.furukawa.model.Turno
+import br.com.furukawa.model.TurnoDuracao
+
+model {
+    DiaDaSemana diaDaSemana
+}
+
+json {
+    dia diaDaSemana.name()
+    numeroDia diaDaSemana.day
+}

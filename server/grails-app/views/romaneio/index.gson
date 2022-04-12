@@ -1,0 +1,14 @@
+import br.com.furukawa.dtos.RomaneioListaDTO
+import br.com.furukawa.enums.StatusRomaneio
+
+model {
+    List<RomaneioListaDTO> entities
+    Integer total
+    List<StatusRomaneio> statusRomaneio
+}
+
+json {
+    entities g.render(template: "list", collection: entities, var: "romaneioListaDTO")
+    statusRomaneio statusRomaneio*.name()
+    total total
+}

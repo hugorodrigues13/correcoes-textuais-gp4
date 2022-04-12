@@ -1,0 +1,12 @@
+import br.com.furukawa.model.MotivoDeParada
+
+model {
+    MotivoDeParada motivoParada
+}
+
+json {
+    id motivoParada.id
+    key motivoParada.id
+    nome motivoParada.motivo
+    value motivoParada.motivo
+}

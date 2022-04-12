@@ -1,0 +1,25 @@
+import br.com.furukawa.dtos.SerialFabricacaoDTO
+import br.com.furukawa.enums.StatusImpressaoEtiqueta
+import br.com.furukawa.enums.StatusLote
+import br.com.furukawa.enums.StatusOrdemDeProducaoWIP
+import br.com.furukawa.enums.StatusSerialFabricacao
+import br.com.furukawa.enums.StatusOrdemFabricacao
+import br.com.furukawa.enums.StatusRomaneio
+
+model {
+    List<StatusSerialFabricacao> statusList
+    List<StatusOrdemFabricacao> statusOrdemFabricacaoList
+    List<StatusRomaneio> statusRomaneioList
+    List<StatusOrdemDeProducaoWIP> statusWipList
+    List<StatusLote> statusLoteList
+    List<StatusImpressaoEtiqueta> statusImpressaoEtiqueta
+}
+
+json {
+    statusList statusList*.name()
+    statusOrdemFabricacaoList statusOrdemFabricacaoList
+    statusRomaneioList statusRomaneioList
+    statusWipList statusWipList
+    statusLoteList statusLoteList
+    statusImpressaoEtiqueta statusImpressaoEtiqueta
+}

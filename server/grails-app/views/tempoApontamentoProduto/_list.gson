@@ -1,0 +1,14 @@
+import br.com.furukawa.model.TempoApontamentoProduto
+
+model {
+    TempoApontamentoProduto tempoApontamento
+}
+
+json {
+    id tempoApontamento.id
+    codigoProduto tempoApontamento.codigoProduto
+    tempoApontamento tempoApontamento.tempoApontamento
+    vigenciaDe tempoApontamento.vigenciaDeFormatada
+    vigenciaAte tempoApontamento.vigenciaAteFormatada
+    grupoRecurso tempoApontamento.grupoRecurso.nome
+}

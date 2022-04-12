@@ -1,0 +1,15 @@
+import br.com.furukawa.model.ProdutoRomaneio
+
+model {
+    ProdutoRomaneio produto
+}
+
+json {
+    id produto.id
+    key produto.id
+    codigo produto.codigo
+    descricao produto.getDescricao()
+    unidade produto.unidade
+    quantidade produto.quantidade
+    volume produto.volume
+}

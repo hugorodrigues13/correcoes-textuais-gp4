@@ -1,0 +1,91 @@
+.data-cell {
+  padding: 8px;
+  border: 1px solid #ececec;
+  height: 17px;
+  color: #707070;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.data-cell.small {
+  padding: 2px;
+}
+
+.data-title {
+  background-color: #0E6FEE;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.grafico-container {
+  width: 100%;
+  border: #D2D2D2 1px solid;
+  border-radius: 3px;
+  height: 380px;
+}
+
+.grafico-legenda-extra {
+  position: absolute;
+  top: 40px;
+  font-weight: bold;
+  right: 12px;
+  font-size: 16px;
+}
+
+.grafico-legenda-media-mensal {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.grafico-legenda-extra-ref {
+  position: absolute;
+  top: 60px;
+  font-weight: bold;
+  right: 12px;
+  font-size: 16px;
+}
+
+.grafico-filtro {
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  padding: 6px;
+  z-index: 10;
+}
+
+
+.apexcharts-bar-area[val="0"] {
+  display: none;
+}
+
+.btt-asaichi {
+  right: 50px!important;
+  bottom: 70px!important;
+}
+
+.box-observacoes {
+  padding:20px 24px;
+  margin-bottom: 24px;
+  align-items: baseline;
+  /* width: 50%; */
+  width: max-content;
+  border: solid 1px #d9d9d9;
+}
+.box-observacoes .title {
+  color: #707070;
+  font-size: 18px;
+}
+.box-observacoes .itens-observacoes {
+  margin-left: 14px;
+}
+.box-observacoes .itens-observacoes button span {
+  text-transform: uppercase;
+}

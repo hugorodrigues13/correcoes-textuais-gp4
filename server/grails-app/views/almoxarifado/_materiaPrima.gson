@@ -1,0 +1,12 @@
+import br.com.furukawa.model.MateriaPrimaSeparacao
+
+model {
+    MateriaPrimaSeparacao materiaPrimaSeparacao
+}
+
+json {
+    id materiaPrimaSeparacao.id
+    codigoProduto materiaPrimaSeparacao.codigoProduto
+    descricaoProduto materiaPrimaSeparacao.descricaoProduto
+    quantidade materiaPrimaSeparacao.quantidade
+}

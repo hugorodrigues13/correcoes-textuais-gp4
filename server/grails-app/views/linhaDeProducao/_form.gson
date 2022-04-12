@@ -1,0 +1,12 @@
+import br.com.furukawa.model.LinhaDeProducao
+
+model {
+    LinhaDeProducao entityInstance
+}
+
+json{
+    id entityInstance.id
+    nome entityInstance.nome
+    versao entityInstance.versao ?: 1
+    processos g.render(template: "processoForm", collection: entityInstance.processos?.sort{it.ordem}, var: 'processo')
+}
